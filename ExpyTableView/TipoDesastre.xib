@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TipoDesastre" customModule="Sismo_App_Example" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="eDr-v5-a3v" customClass="TipoDesastre" customModule="Sismo_App_Example" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="304" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xhd-59-Bew">
+                    <rect key="frame" x="0.0" y="8" width="304" height="50"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="keF-G7-8jX">
+                            <rect key="frame" x="16" y="34" width="269" height="2"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="qmv-rt-eGj"/>
+                            </constraints>
+                        </view>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="triangulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="g2u-o8-yhN">
+                            <rect key="frame" x="271" y="13" width="14" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="1RL-fi-IYN"/>
+                                <constraint firstAttribute="width" constant="14" id="bRo-7d-N6d"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHD-my-6g7">
+                            <rect key="frame" x="16" y="6" width="269" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="fzH-zc-9VO"/>
+                            </constraints>
+                            <state key="normal" title="Seleccionar">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="nHD-my-6g7" firstAttribute="top" secondItem="xhd-59-Bew" secondAttribute="top" constant="6" id="ASF-SC-JtP"/>
+                        <constraint firstItem="g2u-o8-yhN" firstAttribute="centerY" secondItem="nHD-my-6g7" secondAttribute="centerY" id="DVi-ay-q2b"/>
+                        <constraint firstItem="keF-G7-8jX" firstAttribute="bottom" secondItem="nHD-my-6g7" secondAttribute="bottom" id="FhR-xY-brW"/>
+                        <constraint firstItem="keF-G7-8jX" firstAttribute="leading" secondItem="nHD-my-6g7" secondAttribute="leading" id="K6D-9a-vSF"/>
+                        <constraint firstAttribute="trailing" secondItem="nHD-my-6g7" secondAttribute="trailing" constant="19" id="OHl-Ht-teq"/>
+                        <constraint firstItem="g2u-o8-yhN" firstAttribute="trailing" secondItem="nHD-my-6g7" secondAttribute="trailing" id="ZJz-iE-r06"/>
+                        <constraint firstItem="keF-G7-8jX" firstAttribute="trailing" secondItem="nHD-my-6g7" secondAttribute="trailing" id="dQb-oD-KkU"/>
+                        <constraint firstItem="nHD-my-6g7" firstAttribute="leading" secondItem="xhd-59-Bew" secondAttribute="leading" constant="16" id="l0y-PF-yyg"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xhd-59-Bew" firstAttribute="top" secondItem="juM-XB-f5O" secondAttribute="top" constant="8" id="3eb-rJ-VLc"/>
+                <constraint firstItem="juM-XB-f5O" firstAttribute="trailing" secondItem="xhd-59-Bew" secondAttribute="trailing" id="Axb-HS-Cc9"/>
+                <constraint firstItem="juM-XB-f5O" firstAttribute="bottom" secondItem="xhd-59-Bew" secondAttribute="bottom" constant="12" id="Cml-Ff-89c"/>
+                <constraint firstItem="xhd-59-Bew" firstAttribute="leading" secondItem="juM-XB-f5O" secondAttribute="leading" id="tgv-oz-Qsl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="juM-XB-f5O"/>
+            <connections>
+                <outlet property="btnSeleccionar" destination="nHD-my-6g7" id="Fgg-QO-2TQ"/>
+            </connections>
+            <point key="canvasLocation" x="-35" y="-184"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="triangulo.png" width="512" height="512"/>
+    </resources>
+</document>

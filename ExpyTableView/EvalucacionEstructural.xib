@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EvalucacionEstructural" customModule="Sismo_App_Example" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Pz4-cH-00o" customClass="EvalucacionEstructural" customModule="Sismo_App_Example" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="304" height="212"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="adelante.png" translatesAutoresizingMaskIntoConstraints="NO" id="bcX-eE-bdz">
+                    <rect key="frame" x="252" y="16" width="36" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="36" id="9VP-Ct-7cq"/>
+                        <constraint firstAttribute="height" constant="35" id="fni-kB-4zU"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEk-Gg-aXU">
+                    <rect key="frame" x="23" y="16" width="265" height="35"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="XCc-Ee-4dz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Sistema estructural">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="IrSistemaEstructural:" destination="Pz4-cH-00o" eventType="touchUpInside" id="Ty9-1V-Mxy"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="adelante.png" translatesAutoresizingMaskIntoConstraints="NO" id="FjU-dZ-Ky7">
+                    <rect key="frame" x="252" y="65" width="36" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="0aF-ae-gDq"/>
+                        <constraint firstAttribute="width" constant="36" id="b0L-Tu-sIE"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2If-tQ-PF9">
+                    <rect key="frame" x="23" y="65" width="265" height="35"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="nPM-bF-rfI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Inspección Nº1">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="IrInspeccion1:" destination="Pz4-cH-00o" eventType="touchUpInside" id="boF-o8-nlw"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="adelante.png" translatesAutoresizingMaskIntoConstraints="NO" id="BCX-Le-LUM">
+                    <rect key="frame" x="252" y="111" width="36" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="36" id="BtC-g1-Iry"/>
+                        <constraint firstAttribute="height" constant="35" id="OjH-At-ff5"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRd-IW-XXB">
+                    <rect key="frame" x="23" y="111" width="265" height="35"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="n3q-Af-Yib"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Inspección Nº2">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="IrInsPeccion2:" destination="Pz4-cH-00o" eventType="touchUpInside" id="3iX-jM-iP1"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="adelante.png" translatesAutoresizingMaskIntoConstraints="NO" id="fEw-86-E4h">
+                    <rect key="frame" x="252" y="159" width="36" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="36" id="DfW-cd-P36"/>
+                        <constraint firstAttribute="height" constant="35" id="Oph-dA-1uR"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgp-gZ-0NP">
+                    <rect key="frame" x="23" y="159" width="265" height="35"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Inspección Nº3">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="IrInsPeccion3:" destination="Pz4-cH-00o" eventType="touchUpInside" id="LXL-i0-blQ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="MEk-Gg-aXU" firstAttribute="bottom" secondItem="bcX-eE-bdz" secondAttribute="bottom" id="3t8-vg-FCK"/>
+                <constraint firstItem="XRd-IW-XXB" firstAttribute="top" secondItem="BCX-Le-LUM" secondAttribute="top" id="5I4-md-LRN"/>
+                <constraint firstItem="MEk-Gg-aXU" firstAttribute="top" secondItem="O13-z6-uIj" secondAttribute="top" constant="16" id="7Bu-3n-XLv"/>
+                <constraint firstItem="BCX-Le-LUM" firstAttribute="leading" secondItem="fEw-86-E4h" secondAttribute="leading" id="7al-g2-5bM"/>
+                <constraint firstItem="XRd-IW-XXB" firstAttribute="leading" secondItem="Hgp-gZ-0NP" secondAttribute="leading" id="9Es-Lj-MBr"/>
+                <constraint firstItem="O13-z6-uIj" firstAttribute="bottom" secondItem="Hgp-gZ-0NP" secondAttribute="bottom" constant="18" id="9G9-ZR-aE3"/>
+                <constraint firstItem="FjU-dZ-Ky7" firstAttribute="trailing" secondItem="2If-tQ-PF9" secondAttribute="trailing" id="CBh-4L-iWB"/>
+                <constraint firstItem="XRd-IW-XXB" firstAttribute="trailing" secondItem="BCX-Le-LUM" secondAttribute="trailing" id="DPY-43-7li"/>
+                <constraint firstItem="MEk-Gg-aXU" firstAttribute="trailing" secondItem="FjU-dZ-Ky7" secondAttribute="trailing" id="DV9-vV-J2s"/>
+                <constraint firstItem="Hgp-gZ-0NP" firstAttribute="bottom" secondItem="fEw-86-E4h" secondAttribute="bottom" id="IKW-Uy-m8r"/>
+                <constraint firstItem="bcX-eE-bdz" firstAttribute="leading" secondItem="FjU-dZ-Ky7" secondAttribute="leading" id="Ias-Mo-qyh"/>
+                <constraint firstItem="FjU-dZ-Ky7" firstAttribute="leading" secondItem="BCX-Le-LUM" secondAttribute="leading" id="M0E-aq-ClU"/>
+                <constraint firstItem="MEk-Gg-aXU" firstAttribute="top" secondItem="bcX-eE-bdz" secondAttribute="top" id="MNF-D0-nKx"/>
+                <constraint firstItem="XRd-IW-XXB" firstAttribute="trailing" secondItem="fEw-86-E4h" secondAttribute="trailing" id="QNE-Zd-FgV"/>
+                <constraint firstItem="MEk-Gg-aXU" firstAttribute="trailing" secondItem="Pz4-cH-00o" secondAttribute="trailingMargin" id="Rak-HO-wEg"/>
+                <constraint firstItem="2If-tQ-PF9" firstAttribute="leading" secondItem="XRd-IW-XXB" secondAttribute="leading" id="UCm-h2-fg2"/>
+                <constraint firstItem="FjU-dZ-Ky7" firstAttribute="top" secondItem="MEk-Gg-aXU" secondAttribute="bottom" constant="14" id="VrK-ca-Q61"/>
+                <constraint firstItem="Hgp-gZ-0NP" firstAttribute="top" secondItem="BCX-Le-LUM" secondAttribute="bottom" constant="13" id="ZZR-NZ-fFH"/>
+                <constraint firstItem="2If-tQ-PF9" firstAttribute="top" secondItem="FjU-dZ-Ky7" secondAttribute="top" id="aqy-GG-B56"/>
+                <constraint firstItem="Hgp-gZ-0NP" firstAttribute="trailing" secondItem="fEw-86-E4h" secondAttribute="trailing" id="d3h-F9-kcW"/>
+                <constraint firstItem="2If-tQ-PF9" firstAttribute="trailing" secondItem="XRd-IW-XXB" secondAttribute="trailing" id="eLs-eU-deB"/>
+                <constraint firstItem="bcX-eE-bdz" firstAttribute="leading" secondItem="O13-z6-uIj" secondAttribute="leading" constant="252" id="ezh-j9-n6S"/>
+                <constraint firstItem="XRd-IW-XXB" firstAttribute="top" secondItem="FjU-dZ-Ky7" secondAttribute="bottom" constant="11" id="fqM-Fa-ghF"/>
+                <constraint firstItem="MEk-Gg-aXU" firstAttribute="trailing" secondItem="bcX-eE-bdz" secondAttribute="trailing" id="mGP-BM-1qu"/>
+                <constraint firstItem="Hgp-gZ-0NP" firstAttribute="top" secondItem="fEw-86-E4h" secondAttribute="top" id="oTH-zV-Tn2"/>
+                <constraint firstItem="MEk-Gg-aXU" firstAttribute="leading" secondItem="O13-z6-uIj" secondAttribute="leading" constant="23" id="qbB-qT-6Qs"/>
+                <constraint firstItem="2If-tQ-PF9" firstAttribute="bottom" secondItem="FjU-dZ-Ky7" secondAttribute="bottom" id="tF8-oa-em7"/>
+                <constraint firstItem="MEk-Gg-aXU" firstAttribute="leading" secondItem="2If-tQ-PF9" secondAttribute="leading" id="uuz-A7-j5Z"/>
+                <constraint firstItem="XRd-IW-XXB" firstAttribute="bottom" secondItem="BCX-Le-LUM" secondAttribute="bottom" id="ylE-EU-fTe"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="O13-z6-uIj"/>
+            <point key="canvasLocation" x="-35" y="-113"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="adelante.png" width="513" height="513"/>
+    </resources>
+</document>

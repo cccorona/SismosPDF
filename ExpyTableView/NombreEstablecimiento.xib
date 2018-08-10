@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NombreEstablecimiento" customModule="Sismo_App_Example" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="A5e-op-vyK" customClass="NombreEstablecimiento" customModule="Sismo_App_Example" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="304" height="62"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXc-27-CUO">
+                    <rect key="frame" x="0.0" y="8" width="304" height="42"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qaq-Kc-eNy">
+                            <rect key="frame" x="0.0" y="-2" width="304" height="61"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e9S-BD-FTN">
+                                    <rect key="frame" x="22" y="7" width="260" height="35"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Escriba aquí" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RS2-ap-GDv">
+                                            <rect key="frame" x="8" y="0.0" width="244" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="A5e-op-vyK" id="MlW-N0-8Vz"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="35" id="aQj-1V-gbI"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="e9S-BD-FTN" secondAttribute="trailing" constant="22" id="CTv-Gj-oV2"/>
+                                <constraint firstItem="e9S-BD-FTN" firstAttribute="leading" secondItem="Qaq-Kc-eNy" secondAttribute="leading" constant="22" id="gTQ-2l-sow"/>
+                                <constraint firstAttribute="height" constant="61" id="gtv-oh-CcH"/>
+                                <constraint firstItem="e9S-BD-FTN" firstAttribute="top" secondItem="Qaq-Kc-eNy" secondAttribute="top" constant="7" id="ovm-mu-BYV"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Qaq-Kc-eNy" secondAttribute="trailing" id="H7D-oP-tup"/>
+                        <constraint firstItem="Qaq-Kc-eNy" firstAttribute="leading" secondItem="hXc-27-CUO" secondAttribute="leading" id="JM8-xd-mHE"/>
+                        <constraint firstItem="Qaq-Kc-eNy" firstAttribute="top" secondItem="hXc-27-CUO" secondAttribute="top" constant="-2" id="rpF-1g-BVZ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hXc-27-CUO" firstAttribute="leading" secondItem="DGG-qf-uXt" secondAttribute="leading" id="19U-cR-o0v"/>
+                <constraint firstItem="DGG-qf-uXt" firstAttribute="bottom" secondItem="hXc-27-CUO" secondAttribute="bottom" constant="12" id="2DT-jB-cw7"/>
+                <constraint firstItem="hXc-27-CUO" firstAttribute="top" secondItem="DGG-qf-uXt" secondAttribute="top" constant="8" id="BJB-tK-3Jz"/>
+                <constraint firstItem="DGG-qf-uXt" firstAttribute="trailing" secondItem="hXc-27-CUO" secondAttribute="trailing" id="ze4-1n-qRO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="DGG-qf-uXt"/>
+            <connections>
+                <outlet property="VistaTexto" destination="e9S-BD-FTN" id="SdB-4B-gtf"/>
+                <outlet property="txtNombreEstablecimiento" destination="RS2-ap-GDv" id="Jka-iq-wNF"/>
+            </connections>
+            <point key="canvasLocation" x="-35" y="-188"/>
+        </view>
+    </objects>
+</document>

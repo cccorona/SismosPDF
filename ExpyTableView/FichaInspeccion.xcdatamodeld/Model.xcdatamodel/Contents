@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17F77" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Ficha" representedClassName="Ficha" syncable="YES" codeGenerationType="class">
+        <attribute name="estado" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion4" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion5" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion6" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion7" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion8" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion9" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion10" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion11" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion12" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion13" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion14" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion15" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion16" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion17" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion18" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion19" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion20" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion21" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion22" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion23" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion24" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion25" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion26" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion27" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion28" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion29" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion30" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion31" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion32" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion33" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion34" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion35" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion36" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion37" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion38" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion39" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion40" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion41" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion42" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion43" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion44" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion45" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion46" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion47" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion48" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion49" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion50" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion51" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion52" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion53" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion54" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion55" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion56" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion57" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion58" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion59" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion60" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion61" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evalucacion62" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fecha" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="folio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="foto1" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="foto2" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="foto3" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="hora" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identificacion1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identificacion2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identificacion3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identificacion4" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identificacion5" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identificacion6" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identificacion7" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identificacion8" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identificacion9" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identificacion10" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identificacion11" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identificacion12" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identificacion13" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identificacion14" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identificacion15" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identificacion16" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identificacion17" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identificacion18" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idficha" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="informe1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="informe2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="informe3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="informe4" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="informe5" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitud" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitud" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Insp1" representedClassName="Insp1" syncable="YES" codeGenerationType="class">
+        <attribute name="elemento" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idficha" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="letra" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="num_letra" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="num_resp" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="respuesta" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Insp2" representedClassName="Insp2" syncable="YES" codeGenerationType="class">
+        <attribute name="ele1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ele2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ele3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ele4" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ele5" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="elemento" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idficha" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orden" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="total" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Insp3" representedClassName="Insp3" syncable="YES" codeGenerationType="class">
+        <attribute name="elemento" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idficha" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="letra" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="num_letra" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="num_resp" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="otros" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="respuesta" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Ficha" positionX="-63" positionY="-18" width="128" height="1485"/>
+        <element name="Insp1" positionX="-63" positionY="135" width="128" height="135"/>
+        <element name="Insp2" positionX="-54" positionY="144" width="128" height="180"/>
+        <element name="Insp3" positionX="-36" positionY="153" width="128" height="150"/>
+    </elements>
+</model>

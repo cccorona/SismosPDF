@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TipoEstablecimiento" customModule="Sismo_App_Example" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="JhW-08-Brs" customClass="TipoEstablecimiento" customModule="Sismo_App_Example" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="304" height="62"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5T2-oS-1jm">
+                    <rect key="frame" x="0.0" y="8" width="304" height="42"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oGe-eE-BbD">
+                            <rect key="frame" x="16" y="34" width="269" height="2"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="u6q-iM-dm4"/>
+                            </constraints>
+                        </view>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="triangulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="TsV-Uq-hwA">
+                            <rect key="frame" x="271" y="13" width="14" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="14" id="n4S-8D-AaD"/>
+                                <constraint firstAttribute="height" constant="16" id="vtw-1T-Vr0"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9z-WR-lXy">
+                            <rect key="frame" x="16" y="6" width="269" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="aXu-xf-X1G"/>
+                            </constraints>
+                            <state key="normal" title="Seleccionar">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="X9z-WR-lXy" secondAttribute="trailing" constant="19" id="9mx-6n-w3Z"/>
+                        <constraint firstItem="TsV-Uq-hwA" firstAttribute="centerY" secondItem="X9z-WR-lXy" secondAttribute="centerY" id="fcX-ui-p7L"/>
+                        <constraint firstItem="oGe-eE-BbD" firstAttribute="trailing" secondItem="X9z-WR-lXy" secondAttribute="trailing" id="h3t-eR-pym"/>
+                        <constraint firstItem="oGe-eE-BbD" firstAttribute="bottom" secondItem="X9z-WR-lXy" secondAttribute="bottom" id="lIt-E4-Cp9"/>
+                        <constraint firstItem="X9z-WR-lXy" firstAttribute="top" secondItem="5T2-oS-1jm" secondAttribute="top" constant="6" id="oMr-5c-zWK"/>
+                        <constraint firstItem="TsV-Uq-hwA" firstAttribute="trailing" secondItem="X9z-WR-lXy" secondAttribute="trailing" id="oU7-LH-qWa"/>
+                        <constraint firstItem="oGe-eE-BbD" firstAttribute="leading" secondItem="X9z-WR-lXy" secondAttribute="leading" id="sr2-kC-wvA"/>
+                        <constraint firstItem="X9z-WR-lXy" firstAttribute="leading" secondItem="5T2-oS-1jm" secondAttribute="leading" constant="16" id="z3m-ZY-ZOj"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xWw-T1-wtJ" firstAttribute="trailing" secondItem="5T2-oS-1jm" secondAttribute="trailing" id="YTA-uA-nrK"/>
+                <constraint firstItem="5T2-oS-1jm" firstAttribute="leading" secondItem="xWw-T1-wtJ" secondAttribute="leading" id="ckl-UX-jih"/>
+                <constraint firstItem="5T2-oS-1jm" firstAttribute="top" secondItem="xWw-T1-wtJ" secondAttribute="top" constant="8" id="hqC-3k-P8c"/>
+                <constraint firstItem="xWw-T1-wtJ" firstAttribute="bottom" secondItem="5T2-oS-1jm" secondAttribute="bottom" constant="12" id="is4-wp-pOx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="xWw-T1-wtJ"/>
+            <connections>
+                <outlet property="btnSeleccionar" destination="X9z-WR-lXy" id="duO-AQ-8OW"/>
+            </connections>
+            <point key="canvasLocation" x="-35" y="-188"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="triangulo.png" width="512" height="512"/>
+    </resources>
+</document>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IdentificacionGeografica" customModule="Sismo_App_Example" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="IdentificacionGeografica" customModule="Sismo_App_Example" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="304" height="107"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rb7-y5-lYY">
+                    <rect key="frame" x="0.0" y="8" width="304" height="42"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Say-Ta-9US">
+                            <rect key="frame" x="16" y="34" width="269" height="2"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="4In-Ed-6de"/>
+                            </constraints>
+                        </view>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="triangulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="T7o-Se-aBo">
+                            <rect key="frame" x="271" y="13" width="14" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="J00-a7-07Z"/>
+                                <constraint firstAttribute="width" constant="14" id="vz0-lp-Okb"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eG1-mf-9Xs">
+                            <rect key="frame" x="16" y="6" width="269" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="Xkg-H9-K5n"/>
+                            </constraints>
+                            <state key="normal" title="Seleccionar">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Say-Ta-9US" firstAttribute="trailing" secondItem="eG1-mf-9Xs" secondAttribute="trailing" id="C5F-W6-6nJ"/>
+                        <constraint firstItem="T7o-Se-aBo" firstAttribute="trailing" secondItem="eG1-mf-9Xs" secondAttribute="trailing" id="Cyb-7I-qeT"/>
+                        <constraint firstItem="Say-Ta-9US" firstAttribute="leading" secondItem="eG1-mf-9Xs" secondAttribute="leading" id="Iuu-Xo-98x"/>
+                        <constraint firstAttribute="trailing" secondItem="eG1-mf-9Xs" secondAttribute="trailing" constant="19" id="YrB-BZ-1sR"/>
+                        <constraint firstItem="T7o-Se-aBo" firstAttribute="centerY" secondItem="eG1-mf-9Xs" secondAttribute="centerY" id="cSU-dK-XwN"/>
+                        <constraint firstItem="eG1-mf-9Xs" firstAttribute="top" secondItem="rb7-y5-lYY" secondAttribute="top" constant="6" id="h87-7t-jLn"/>
+                        <constraint firstItem="Say-Ta-9US" firstAttribute="bottom" secondItem="eG1-mf-9Xs" secondAttribute="bottom" id="qYG-hX-Mrm"/>
+                        <constraint firstItem="eG1-mf-9Xs" firstAttribute="leading" secondItem="rb7-y5-lYY" secondAttribute="leading" constant="16" id="uKw-bd-ywI"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfV-hl-LC1">
+                    <rect key="frame" x="4" y="66" width="145" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="27" id="gcU-A7-UTD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                    <state key="normal" title="CARGAR" backgroundImage="boton2.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FmV-Ce-w7w">
+                    <rect key="frame" x="155" y="66" width="145" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="27" id="IBY-p0-cMs"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                    <state key="normal" title="CREAR INFORMACIÓN" backgroundImage="boton2.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="CrearInformacion:" destination="iN0-l3-epB" eventType="touchUpInside" id="Oma-oB-vjO"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="FmV-Ce-w7w" secondAttribute="trailing" constant="4" id="7Xe-dP-cZR"/>
+                <constraint firstItem="OfV-hl-LC1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="4" id="7lC-M6-SnK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rb7-y5-lYY" secondAttribute="trailing" id="84j-Ox-3o8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="OfV-hl-LC1" secondAttribute="bottom" constant="14" id="BTw-Eu-nIC"/>
+                <constraint firstItem="rb7-y5-lYY" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="IRP-Wt-GIv"/>
+                <constraint firstAttribute="bottom" secondItem="rb7-y5-lYY" secondAttribute="bottom" constant="57" id="IeM-ha-q6J"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="FmV-Ce-w7w" secondAttribute="bottom" constant="14" id="JZF-Qy-4Eo"/>
+                <constraint firstItem="rb7-y5-lYY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="RmG-Dm-2Ax"/>
+                <constraint firstItem="FmV-Ce-w7w" firstAttribute="width" secondItem="OfV-hl-LC1" secondAttribute="width" id="ghc-VT-X5M"/>
+                <constraint firstItem="FmV-Ce-w7w" firstAttribute="leading" secondItem="OfV-hl-LC1" secondAttribute="trailing" constant="6" id="wsl-oe-6FB"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="btnCargar" destination="OfV-hl-LC1" id="aSC-RQ-9Yo"/>
+                <outlet property="btnCrear" destination="FmV-Ce-w7w" id="ylI-nN-Org"/>
+                <outlet property="btnSeleccionar" destination="eG1-mf-9Xs" id="UWQ-6P-2Do"/>
+            </connections>
+            <point key="canvasLocation" x="-22" y="-225.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="boton2.png" width="463" height="109"/>
+        <image name="triangulo.png" width="512" height="512"/>
+    </resources>
+</document>

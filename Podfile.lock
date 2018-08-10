@@ -1,0 +1,49 @@
+PODS:
+  - Alamofire (4.6.0)
+  - AlamofireImage (3.3.0):
+    - Alamofire (~> 4.5)
+  - ExpyTableView (0.3.1)
+  - IQKeyboardManager (5.0.7)
+  - PDFGenerator (2.1)
+  - PWSwitch (1.1.0)
+  - SwiftMessages (4.1.0)
+  - SwiftyJSON (4.0.0)
+  - TCProgressBar (0.4)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage
+  - ExpyTableView
+  - IQKeyboardManager
+  - PDFGenerator (~> 2.1)
+  - PWSwitch
+  - SwiftMessages
+  - SwiftyJSON
+  - TCProgressBar
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - AlamofireImage
+    - ExpyTableView
+    - IQKeyboardManager
+    - PDFGenerator
+    - PWSwitch
+    - SwiftMessages
+    - SwiftyJSON
+    - TCProgressBar
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
+  ExpyTableView: e6380c5ac1f6c1044fbc63800380c64b3477e53b
+  IQKeyboardManager: 0bfa4607d39924116b5c0c8b55b5d789288b5cba
+  PDFGenerator: 4fd5db4972465679f4846a9a36d53e8826536a6d
+  PWSwitch: e5a45cb84ff794a4d651812cce1f061764629ed3
+  SwiftMessages: 1bacc783c8f10bdfdc57c14860cae8a1f1fa6591
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  TCProgressBar: 14bf8cce9d9a4dae2d82fe88b8e9c45709ebe55d
+
+PODFILE CHECKSUM: 14d1e69e48cf8e96569cfa6fde71f93b82ab01f5
+
+COCOAPODS: 1.5.0

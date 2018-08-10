@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14111" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NuevaIdentificacionGeografica" customModule="Sismo_App_Example" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="NZs-9v-ksq" customClass="NuevaIdentificacionGeografica" customModule="Sismo_App_Example" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="304" height="130"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8iv-Fb-UIm">
+                    <rect key="frame" x="0.0" y="0.0" width="304" height="130"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVv-rD-h6S">
+                            <rect key="frame" x="0.0" y="5" width="304" height="37"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzv-TC-yg9">
+                                    <rect key="frame" x="18" y="3" width="269" height="30"/>
+                                    <state key="normal" title="Chile">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1mb-hp-Qib">
+                                    <rect key="frame" x="18" y="31" width="269" height="2"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="triangulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="rx6-Sf-azn">
+                                    <rect key="frame" x="273" y="10" width="14" height="16"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="14" id="T8V-4y-lLm"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="mzv-TC-yg9" firstAttribute="leading" secondItem="QVv-rD-h6S" secondAttribute="leading" constant="18" id="4F6-iv-gT8"/>
+                                <constraint firstItem="mzv-TC-yg9" firstAttribute="centerX" secondItem="QVv-rD-h6S" secondAttribute="centerX" id="Cdv-hj-bXf"/>
+                                <constraint firstItem="1mb-hp-Qib" firstAttribute="top" secondItem="rx6-Sf-azn" secondAttribute="bottom" constant="5" id="Fpa-4B-o2J"/>
+                                <constraint firstItem="rx6-Sf-azn" firstAttribute="trailing" secondItem="1mb-hp-Qib" secondAttribute="trailing" id="GXk-iy-fZv"/>
+                                <constraint firstItem="mzv-TC-yg9" firstAttribute="top" secondItem="QVv-rD-h6S" secondAttribute="top" constant="3" id="I0n-bi-V8g"/>
+                                <constraint firstItem="mzv-TC-yg9" firstAttribute="centerY" secondItem="rx6-Sf-azn" secondAttribute="centerY" id="UMg-52-eKW"/>
+                                <constraint firstItem="mzv-TC-yg9" firstAttribute="trailing" secondItem="rx6-Sf-azn" secondAttribute="trailing" id="eH9-ZU-2Lr"/>
+                                <constraint firstItem="mzv-TC-yg9" firstAttribute="centerY" secondItem="QVv-rD-h6S" secondAttribute="centerY" id="kXB-SU-suS"/>
+                                <constraint firstItem="1mb-hp-Qib" firstAttribute="bottom" secondItem="mzv-TC-yg9" secondAttribute="bottom" id="oIJ-cF-NUP"/>
+                                <constraint firstItem="mzv-TC-yg9" firstAttribute="leading" secondItem="1mb-hp-Qib" secondAttribute="leading" id="sZD-o8-c9m"/>
+                                <constraint firstItem="rx6-Sf-azn" firstAttribute="top" secondItem="QVv-rD-h6S" secondAttribute="top" constant="10" id="tJm-KL-ihg"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d41-H7-9gr">
+                            <rect key="frame" x="0.0" y="46" width="304" height="37"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6B-3A-Ko3">
+                                    <rect key="frame" x="18" y="3" width="269" height="30"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <state key="normal" title="Región">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DW2-vD-9yG">
+                                    <rect key="frame" x="18" y="31" width="269" height="2"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="2" id="1XZ-8N-1Dm"/>
+                                    </constraints>
+                                </view>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="triangulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y7N-6m-sql">
+                                    <rect key="frame" x="273" y="10" width="14" height="16"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="14" id="m0Y-xj-gBH"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="Q6B-3A-Ko3" firstAttribute="centerX" secondItem="d41-H7-9gr" secondAttribute="centerX" id="6H6-pE-3I3"/>
+                                <constraint firstItem="Q6B-3A-Ko3" firstAttribute="bottom" secondItem="DW2-vD-9yG" secondAttribute="bottom" id="G0w-bk-t3G"/>
+                                <constraint firstItem="Y7N-6m-sql" firstAttribute="trailing" secondItem="DW2-vD-9yG" secondAttribute="trailing" id="Icm-Zc-lAX"/>
+                                <constraint firstItem="Y7N-6m-sql" firstAttribute="top" secondItem="d41-H7-9gr" secondAttribute="top" constant="10" id="Otv-vx-iA3"/>
+                                <constraint firstItem="Q6B-3A-Ko3" firstAttribute="centerY" secondItem="Y7N-6m-sql" secondAttribute="centerY" id="bhf-ye-gfQ"/>
+                                <constraint firstItem="Q6B-3A-Ko3" firstAttribute="trailing" secondItem="DW2-vD-9yG" secondAttribute="trailing" id="iG3-oX-a8r"/>
+                                <constraint firstItem="Q6B-3A-Ko3" firstAttribute="centerY" secondItem="d41-H7-9gr" secondAttribute="centerY" id="kq4-OW-4Ae"/>
+                                <constraint firstItem="DW2-vD-9yG" firstAttribute="top" secondItem="Y7N-6m-sql" secondAttribute="bottom" constant="5" id="lIh-Ew-R7x"/>
+                                <constraint firstItem="Q6B-3A-Ko3" firstAttribute="leading" secondItem="DW2-vD-9yG" secondAttribute="leading" id="nUi-Zc-9o4"/>
+                                <constraint firstItem="Q6B-3A-Ko3" firstAttribute="leading" secondItem="d41-H7-9gr" secondAttribute="leading" constant="18" id="svI-Zr-AAM"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZpO-hw-pfb">
+                            <rect key="frame" x="0.0" y="89" width="304" height="37"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpd-Ka-3jl">
+                                    <rect key="frame" x="18" y="3" width="269" height="30"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <state key="normal" title="Provincia">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="crG-cq-tsC">
+                                    <rect key="frame" x="18" y="31" width="269" height="2"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="triangulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="K71-DH-baR">
+                                    <rect key="frame" x="273" y="10" width="14" height="16"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="14" id="chm-NZ-jYR"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="crG-cq-tsC" firstAttribute="top" secondItem="K71-DH-baR" secondAttribute="bottom" constant="5" id="20f-df-5nT"/>
+                                <constraint firstItem="rpd-Ka-3jl" firstAttribute="trailing" secondItem="crG-cq-tsC" secondAttribute="trailing" id="5Wm-ni-RSp"/>
+                                <constraint firstItem="rpd-Ka-3jl" firstAttribute="leading" secondItem="ZpO-hw-pfb" secondAttribute="leading" constant="18" id="9ra-rq-6fu"/>
+                                <constraint firstItem="rpd-Ka-3jl" firstAttribute="centerY" secondItem="ZpO-hw-pfb" secondAttribute="centerY" id="IYv-YQ-5zT"/>
+                                <constraint firstItem="K71-DH-baR" firstAttribute="trailing" secondItem="crG-cq-tsC" secondAttribute="trailing" id="Pz2-sr-hbE"/>
+                                <constraint firstItem="K71-DH-baR" firstAttribute="top" secondItem="ZpO-hw-pfb" secondAttribute="top" constant="10" id="Qwc-l8-oX7"/>
+                                <constraint firstItem="rpd-Ka-3jl" firstAttribute="centerX" secondItem="ZpO-hw-pfb" secondAttribute="centerX" id="Ztl-dX-1oQ"/>
+                                <constraint firstItem="rpd-Ka-3jl" firstAttribute="centerY" secondItem="K71-DH-baR" secondAttribute="centerY" id="dFW-Kq-V33"/>
+                                <constraint firstItem="rpd-Ka-3jl" firstAttribute="leading" secondItem="crG-cq-tsC" secondAttribute="leading" id="oNq-jB-hGw"/>
+                                <constraint firstItem="crG-cq-tsC" firstAttribute="bottom" secondItem="rpd-Ka-3jl" secondAttribute="bottom" id="vGh-QI-MMU"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="d41-H7-9gr" firstAttribute="top" secondItem="QVv-rD-h6S" secondAttribute="bottom" constant="4" id="8VN-Px-9jT"/>
+                        <constraint firstItem="QVv-rD-h6S" firstAttribute="top" secondItem="8iv-Fb-UIm" secondAttribute="top" constant="5" id="VTZ-aR-aV7"/>
+                        <constraint firstItem="d41-H7-9gr" firstAttribute="centerY" secondItem="8iv-Fb-UIm" secondAttribute="centerY" id="ew0-6T-Jxk"/>
+                        <constraint firstItem="QVv-rD-h6S" firstAttribute="leading" secondItem="d41-H7-9gr" secondAttribute="leading" id="ja6-De-D4U"/>
+                        <constraint firstItem="d41-H7-9gr" firstAttribute="trailing" secondItem="ZpO-hw-pfb" secondAttribute="trailing" id="kbX-Hv-COy"/>
+                        <constraint firstAttribute="trailing" secondItem="QVv-rD-h6S" secondAttribute="trailing" id="loV-V2-M9w"/>
+                        <constraint firstItem="d41-H7-9gr" firstAttribute="leading" secondItem="ZpO-hw-pfb" secondAttribute="leading" id="ojw-d4-ueU"/>
+                        <constraint firstItem="QVv-rD-h6S" firstAttribute="trailing" secondItem="d41-H7-9gr" secondAttribute="trailing" id="s46-UR-f9x"/>
+                        <constraint firstAttribute="bottom" secondItem="ZpO-hw-pfb" secondAttribute="bottom" constant="4" id="sgM-Dk-9mT"/>
+                        <constraint firstItem="ZpO-hw-pfb" firstAttribute="top" secondItem="d41-H7-9gr" secondAttribute="bottom" constant="6" id="vQ0-de-MTg"/>
+                        <constraint firstItem="QVv-rD-h6S" firstAttribute="leading" secondItem="8iv-Fb-UIm" secondAttribute="leading" id="wll-A7-jpx"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="8iv-Fb-UIm" secondAttribute="trailing" id="3qi-vU-HtT"/>
+                <constraint firstItem="8iv-Fb-UIm" firstAttribute="bottom" secondItem="wKX-R3-R9y" secondAttribute="bottom" id="6Z6-vH-zMi"/>
+                <constraint firstItem="8iv-Fb-UIm" firstAttribute="leading" secondItem="NZs-9v-ksq" secondAttribute="leading" id="h0g-bz-Y1L"/>
+                <constraint firstItem="8iv-Fb-UIm" firstAttribute="top" secondItem="wKX-R3-R9y" secondAttribute="top" id="r7m-T7-0rb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="wKX-R3-R9y"/>
+            <connections>
+                <outlet property="btnPais" destination="mzv-TC-yg9" id="wET-Gl-LHE"/>
+                <outlet property="btnProvencia" destination="rpd-Ka-3jl" id="hbz-UX-djH"/>
+                <outlet property="btnRegion" destination="Q6B-3A-Ko3" id="DMc-h2-Hos"/>
+            </connections>
+            <point key="canvasLocation" x="-35" y="-154"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="triangulo.png" width="512" height="512"/>
+    </resources>
+</document>
