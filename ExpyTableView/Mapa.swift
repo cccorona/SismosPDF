@@ -89,6 +89,7 @@ class Mapa: UIViewController, MKMapViewDelegate ,CLLocationManagerDelegate, UIGe
     
     override func viewWillDisappear(_ animated: Bool) {
         //        GuardarCotización.isEnabled = false
+        
         locationManager.stopUpdatingLocation()
     }
     
@@ -119,6 +120,18 @@ class Mapa: UIViewController, MKMapViewDelegate ,CLLocationManagerDelegate, UIGe
         self.userCoordinate = CLLocationCoordinate2DMake(locValue.latitude, locValue.longitude)
         self.locationManager.stopUpdatingLocation()
         manager.delegate = nil
+        
+        let allAnnotations = self.mapviews.annotations
+        self.mapviews.removeAnnotations(allAnnotations)
+        
+        // Add annotation:
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = locValue
+        latitud = locValue.latitude.description
+        longitud = locValue.longitude.description
+        mapviews.addAnnotation(annotation)
+        
+        CoordenadasSeleccion.text = "Latitud:" + locValue.latitude.description + ", Longitud:" + locValue.longitude.description
     }
     
     @IBAction func atras(_ sender: Any) {
