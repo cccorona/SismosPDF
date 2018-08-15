@@ -31,12 +31,12 @@ class AccesibilidadEstablecimiento: UIView,UITextFieldDelegate {
         self.VistaOtro2.layer.borderColor = UIColor.black.cgColor
         if  !idFichaConsultada.isEmpty {
             var a = idFichaConsultada.first?.value(forKeyPath: "identificacion16") as? String
-            if !(a == "") {
+            if (a != "" && a != nil) {
                 txtOtro.text = a
             }
             
             a = idFichaConsultada.first?.value(forKeyPath: "identificacion18") as? String
-            if !(a == "") {
+            if (a != "" && a != nil) {
                 txtOtro2.text = a
             }
             

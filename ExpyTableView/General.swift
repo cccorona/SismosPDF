@@ -32,35 +32,40 @@ class General: UIView, UITextFieldDelegate {
         
         if  !idFichaConsultada.isEmpty {
             var a = idFichaConsultada.first?.value(forKeyPath: "evalucacion1") as? String
-            if !(a == "") {
+            if (a != "" && a != nil) {
                 if txtNumero != nil {
                     txtNumero.text = a?.description
+                    evalucacion1 = a!
                 }
             }
             a = idFichaConsultada.first?.value(forKeyPath: "evalucacion2") as? String
-            if !(a == "") {
+            if (a != "" && a != nil) {
                 if txtTipo != nil {
                     txtTipo.text = a?.description
+                    evalucacion2 = (a?.description)!
                 }
             }
             a = idFichaConsultada.first?.value(forKeyPath: "evalucacion3") as? String
-            if !(a == "") {
+            if (a != "" && a != nil) {
                 if txtAnio != nil {
                     txtAnio.text = a?.description
+                    evalucacion3 = (a?.description)!
                 }
                 
             }
             a = idFichaConsultada.first?.value(forKeyPath: "evalucacion4") as? String
-            if !(a == "") {
+            if (a != "" && a != nil) {
                 if txtPisos != nil {
                     txtPisos.text = a?.description
+                    evalucacion4 = (a?.description)!
                 }
                 
             }
             a = idFichaConsultada.first?.value(forKeyPath: "evalucacion5") as? String
-            if !(a == "") {
+            if (a != "" && a != nil) {
                 if txtSubterraneo != nil {
                     txtSubterraneo.text = a?.description
+                    evalucacion5 = (a?.description)!
                 }
 
             }
@@ -83,9 +88,23 @@ class General: UIView, UITextFieldDelegate {
         } else if textField ==  txtSubterraneo{
             evalucacion5 = (txtSubterraneo.text as! NSString).description
         }
-
     }
     
+ 
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField ==  txtNumero{
+            evalucacion1 = (txtNumero.text as! NSString).description
+        } else if textField ==  txtTipo{
+            evalucacion2 = (txtTipo.text as! NSString).description
+        } else if textField ==  txtAnio{
+            evalucacion3 = (txtAnio.text as! NSString).description
+        } else if textField ==  txtPisos{
+            evalucacion4 = (txtPisos.text as! NSString).description
+        } else if textField ==  txtSubterraneo{
+            evalucacion5 = (txtSubterraneo.text as! NSString).description
+        }
+        return true
+    }
     
     
     

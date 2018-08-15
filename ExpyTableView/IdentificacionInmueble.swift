@@ -80,26 +80,67 @@ class IdentificacionInmueble: UIViewController {
                 //appDel.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [NSManagedObject] {
                 if fetchResults.count != 0{
                     var managedObject = fetchResults[0]
+                
+                    if identificacion1 != ""{
                     managedObject.setValue(identificacion1, forKey: "identificacion1")
+                    }
+                    if identificacion2 != ""{
                     managedObject.setValue(identificacion2, forKey: "identificacion2")
+                    }
+                    if identificacion3 != ""{
                     managedObject.setValue(identificacion3, forKey: "identificacion3")
+                    }
+                    if identificacion4 != ""{
                     managedObject.setValue(identificacion4, forKey: "identificacion4")
+                    }
+                    if identificacion5 != ""{
                     managedObject.setValue(identificacion5, forKey: "identificacion5")
+                    }
+                    if identificacion6 != ""{
                     managedObject.setValue(identificacion6, forKey: "identificacion6")
+                    }
+                    if identificacion7 != ""{
                     managedObject.setValue(identificacion7, forKey: "identificacion7")
+                    }
+                    if identificacion8 != ""{
                     managedObject.setValue(identificacion8, forKey: "identificacion8")
+                    }
+                    if identificacion9 != ""{
                     managedObject.setValue(identificacion9, forKey: "identificacion9")
+                    }
+                    if identificacion10 != ""{
                     managedObject.setValue(identificacion10, forKey: "identificacion10")
+                    }
+                    if identificacion11 != ""{
                     managedObject.setValue(identificacion11, forKey: "identificacion11")
+                    }
+                    if identificacion12 != ""{
                     managedObject.setValue(identificacion12, forKey: "identificacion12")
+                    }
+                    if identificacion13 != ""{
                     managedObject.setValue(identificacion13, forKey: "identificacion13")
+                    }
+                    if identificacion14 != ""{
                     managedObject.setValue(identificacion14, forKey: "identificacion14")
+                    }
+                    if identificacion15 != ""{
                     managedObject.setValue(identificacion15, forKey: "identificacion15")
+                    }
+                    if identificacion16 != ""{
                     managedObject.setValue(identificacion16, forKey: "identificacion16")
+                    }
+                    if identificacion17 != ""{
                     managedObject.setValue(identificacion17, forKey: "identificacion17")
-                    managedObject.setValue(identificacion18, forKey: "identificacion18")                    
+                    }
+                    if identificacion18 != ""{
+                    managedObject.setValue(identificacion18, forKey: "identificacion18")
+                    }
+                    if latitud != ""{
                     managedObject.setValue(latitud, forKey: "latitud")
+                    }
+                    if longitud != ""{
                     managedObject.setValue(longitud, forKey: "longitud")
+                    }
                     
 
                     try context.save()
@@ -641,7 +682,7 @@ extension IdentificacionInmueble {
                 VistaCelda.btnSeleccionar.addTarget(self, action: #selector(EjecutarBtn(_:)), for: .touchUpInside)
                 if  !idFichaConsultada.isEmpty {
                     let a = idFichaConsultada.first?.value(forKeyPath: "identificacion1") as? String
-                    if !(a == "") {
+                    if (a != "" && a != nil) {
                         VistaCelda.btnSeleccionar.setTitle(a, for: UIControlState.normal)
                     }
                 } else if !identificacion1.isEmpty {
@@ -661,7 +702,7 @@ extension IdentificacionInmueble {
                 VistaCelda.btnSeleccionar.addTarget(self, action: #selector(EjecutarBtn(_:)), for: .touchUpInside)
                 if  !idFichaConsultada.isEmpty {
                     let a = idFichaConsultada.first?.value(forKeyPath: "identificacion2") as? String
-                    if !(a == "") {
+                    if (a != "" && a != nil) {
                         VistaCelda.btnSeleccionar.setTitle(a, for: UIControlState.normal)
                     }
                 } else if !identificacion2.isEmpty {
@@ -703,7 +744,7 @@ extension IdentificacionInmueble {
                 
                 if  !idFichaConsultada.isEmpty {
                     let a = idFichaConsultada.first?.value(forKeyPath: "identificacion5") as? String
-                    if !(a == "") {
+                    if (a != "" && a != nil) {
                         VistaCelda.btnSeleccionar.setTitle(a, for: UIControlState.normal)
                     }
                 } else if !identificacion5.isEmpty {
@@ -735,11 +776,11 @@ extension IdentificacionInmueble {
                 VistaCelda.btnComuna.addTarget(self, action: #selector(EjecutarBtn(_:)), for: .touchUpInside)
                 if  !idFichaConsultada.isEmpty {
                     var a = idFichaConsultada.first?.value(forKeyPath: "identificacion9") as? String
-                    if !(a == "") {
+                    if (a != "" && a != nil) {
                         VistaCelda.btnCiudad.setTitle(a, for: UIControlState.normal)
                     }
                     a = idFichaConsultada.first?.value(forKeyPath: "identificacion11") as? String
-                    if !(a == "") {
+                    if (a != "" && a != nil) {
                         VistaCelda.btnComuna.setTitle(a, for: UIControlState.normal)
                     }
                     
@@ -771,26 +812,30 @@ extension IdentificacionInmueble {
                 VistaCelda.btnCondiciones.addTarget(self, action: #selector(EjecutarBtn(_:)), for: .touchUpInside)
                 if  !idFichaConsultada.isEmpty {
                     var a = idFichaConsultada.first?.value(forKeyPath: "identificacion15") as? String
-                    if !(a == "") {
+                    if (a != "" && a != nil) {
                         VistaCelda.btnAccesibilidad.setTitle(a, for: UIControlState.normal)
                     }
                     a = idFichaConsultada.first?.value(forKeyPath: "identificacion17") as? String
-                    if !(a == "") {
+                    if (a != "" && a != nil) {
                         VistaCelda.btnCondiciones.setTitle(a, for: UIControlState.normal)
                     }
                     
                 }
                 if !identificacion15.isEmpty {
                     VistaCelda.btnAccesibilidad.setTitle(identificacion15, for: UIControlState.normal)
+                }else{
+                    identificacion15 = VistaCelda.btnAccesibilidad.titleLabel?.text ?? ""
                 }
                 
                 if !identificacion17.isEmpty {
                     VistaCelda.btnCondiciones.setTitle(identificacion17, for: UIControlState.normal)
+                }else{
+                    identificacion17 = VistaCelda.btnCondiciones.titleLabel?.text ?? ""
                 }
                 cell.contentView.addSubview(VistaCelda as UIView)
                 return cell
             } else if indexPath.section == 7 {
-                var cell = tableView.dequeueReusableCell(withIdentifier: String(describing: FirstTableViewCell.self)) as! FirstTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: FirstTableViewCell.self)) as! FirstTableViewCell
                 cell.labelFirst.text = "Section1: \(indexPath.section) Row: \(indexPath.row)"
                 let VistaCelda = Bundle.main.loadNibNamed("Georeferenciacion", owner: self, options: nil)?[0] as! Georeferenciacion
                 VistaCelda.frame.size.width = cell.contentView.frame.width

@@ -50,12 +50,12 @@ class Instalaciones: UIView, UITextFieldDelegate {
         super.awakeFromNib()
         if  !idFichaConsultada.isEmpty {
 //            var a = idFichaConsultada.first?.value(forKeyPath: "evalucacion32") as? String
-//            if !(a == "") {
+//            if (a != "" && a != nil) {
 //                txtOtro.text = a
 //            }
             
             var a = idFichaConsultada.first?.value(forKeyPath: "evalucacion32") as? String
-            if !(a == "") {
+            if (a != "" && a != nil) {
                 if txtOtro != nil {
                     txtOtro.text = a?.description
                 }

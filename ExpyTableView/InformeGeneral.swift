@@ -217,19 +217,32 @@ class InformeGeneral: UIViewController {
                     //appDel.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [NSManagedObject] {
                     if fetchResults.count != 0{
                         var managedObject = fetchResults[0]
-                        managedObject.setValue(informe1, forKey: "informe1")
-                        managedObject.setValue(informe2, forKey: "informe2")
-                        managedObject.setValue(informe3, forKey: "informe3")
-                        managedObject.setValue(informe4, forKey: "informe4")
-                        managedObject.setValue(informe5, forKey: "informe5")
-                        
-                        managedObject.setValue(evalucacion57, forKey: "evalucacion57")
-                        managedObject.setValue(evalucacion58, forKey: "evalucacion58")
-                        managedObject.setValue(evalucacion59, forKey: "evalucacion59")
-                        
-                        
+                        if informe1 != ""{
+                            managedObject.setValue(informe1, forKey: "informe1")
+                        }
+                        if informe2 != ""{
+                            managedObject.setValue(informe2, forKey: "informe2")
+                        }
+                        if informe3 != ""{
+                            managedObject.setValue(informe3, forKey: "informe3")
+                        }
+                        if informe4 != ""{
+                            managedObject.setValue(informe4, forKey: "informe4")
+                        }
+                        if informe5 != ""{
+                            managedObject.setValue(informe5, forKey: "informe5")
+                        }
+                        if evalucacion57 != ""{
+                            managedObject.setValue(evalucacion57, forKey: "evalucacion57")
+                        }
+                        if evalucacion58 != ""{
+                            managedObject.setValue(evalucacion58, forKey: "evalucacion58")
+                        }
+                        if evalucacion59 != ""{
+                            managedObject.setValue(evalucacion59, forKey: "evalucacion59")
+                        }
                         try context.save()
-                }
+                    }
                 }
             
             } catch  let error as  NSError {
@@ -314,19 +327,19 @@ extension InformeGeneral {
                 VistaCelda.btnProvencia.addTarget(self, action: #selector(EjecutarBtn(_:)), for: .touchUpInside)
                 if  !idFichaConsultada.isEmpty {
                     var a = idFichaConsultada.first?.value(forKeyPath: "evalucacion57") as? String
-//                    if !(a == "") {
+//                    if (a != "" && a != nil) {
 //                        VistaCelda.btnPais.setTitle(a, for: UIControlState.normal)
 //                    }
                     
                     a = idFichaConsultada.first?.value(forKeyPath: "evalucacion58") as? String
-                    if (a != "") {
+                    if (a != "" && a != nil) {
                         VistaCelda.btnRegion.setTitle(a, for: UIControlState.normal)
                     }else{
                         VistaCelda.btnRegion.setTitle("Región", for: UIControlState.normal)
                     }
                     
                     a = idFichaConsultada.first?.value(forKeyPath: "evalucacion59") as? String
-                    if (a != "") {
+                    if (a != "" && a != nil) {
                         VistaCelda.btnProvencia.setTitle(a, for: UIControlState.normal)
                     }else{
                         VistaCelda.btnProvencia.setTitle("Provincia", for: UIControlState.normal)
@@ -362,7 +375,7 @@ extension InformeGeneral {
                 VistaCelda.btnSeleccionar.addTarget(self, action: #selector(EjecutarBtn(_:)), for: .touchUpInside)
                 if  !idFichaConsultada.isEmpty {
                     let a = idFichaConsultada.first?.value(forKeyPath: "informe2") as? String
-                    if !(a == "") {
+                    if (a != "" && a != nil) {
                         VistaCelda.btnSeleccionar.setTitle(a, for: UIControlState.normal)
                     }
                 } else if !informe2.isEmpty {
@@ -382,7 +395,7 @@ extension InformeGeneral {
                 VistaCelda.btnSeleccionar.addTarget(self, action: #selector(EjecutarBtn(_:)), for: .touchUpInside)
                 if  !idFichaConsultada.isEmpty {
                     let a = idFichaConsultada.first?.value(forKeyPath: "informe3") as? String
-                    if !(a == "") {
+                    if (a != "" && a != nil) {
                         VistaCelda.btnSeleccionar.setTitle(a, for: UIControlState.normal)
                     }
                 } else if !informe3.isEmpty {

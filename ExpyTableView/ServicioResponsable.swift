@@ -23,7 +23,7 @@ class ServicioResponsable: UIView, UITextFieldDelegate {
         self.VistaTexto.layer.borderColor = UIColor.black.cgColor
         if  !idFichaConsultada.isEmpty {
             let a = idFichaConsultada.first?.value(forKeyPath: "identificacion4") as? String
-            if !(a == "") {
+            if (a != "" && a != nil) {
                 txtServicioResponsable.text = a
             }
         }

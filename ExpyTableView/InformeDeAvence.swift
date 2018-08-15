@@ -272,21 +272,12 @@ class InformeDeAvence: UIViewController, UITableViewDataSource, UITableViewDeleg
                 appDelegate.persistentContainer.viewContext
             let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Ficha")
             fetchRequest.predicate = NSPredicate(format: "idficha = %@", self.MatrizFichas[sender.tag][2] )
-            
-            //3
             do {
 
                 idFichaConsultada = try managedContext.fetch(fetchRequest)
-                if let result = try? context.fetch(fetchRequest) {
-//                    for object in result {
-//                        context.delete(object)
-//                        self.Tabla.reloadData()
-//                    }
+                if (try? context.fetch(fetchRequest)) != nil {
                     for registro in idFichaConsultada {
                         context.delete(registro)
-                        let newIndexPath =   IndexPath(row: sender.tag , section: 0)
-                        
-//                        self.Tabla.deleteRows(at: [newIndexPath]  , with: .bottom )
                         self.MatrizFichas.remove(at: sender.tag)
                         self.Tabla.reloadData()
                     }

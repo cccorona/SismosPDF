@@ -50,19 +50,19 @@ class DireccionEstablecimiento: UIView, UITextFieldDelegate {
         
         if  !idFichaConsultada.isEmpty {
             var a = idFichaConsultada.first?.value(forKeyPath: "identificacion10") as? String
-            if !(a == "") {
+            if (a != "" && a != nil) {
                 txtPueblo.text = a
             }
             a = idFichaConsultada.first?.value(forKeyPath: "identificacion12") as? String
-            if !(a == "") {
+            if (a != "" && a != nil) {
                 txtCalle.text = a
             }
             a = idFichaConsultada.first?.value(forKeyPath: "identificacion13") as? String
-            if !(a == "") {
+            if (a != "" && a != nil) {
                 txtDireccion2.text = a
             }
             a = idFichaConsultada.first?.value(forKeyPath: "identificacion14") as? String
-            if !(a == "") {
+            if (a != "" && a != nil) {
                 txtDireccion3.text = a
             }
         }

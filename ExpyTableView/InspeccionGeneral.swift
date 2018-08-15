@@ -22,8 +22,9 @@ class InspeccionGeneral: UIView, UITextFieldDelegate, UITextViewDelegate {
         super.awakeFromNib()
         if  !idFichaConsultada.isEmpty {
             var a = idFichaConsultada.first?.value(forKeyPath: "evalucacion9") as? String
-            if !(a == "") {
+            if (a != "" && a != nil) {
                 txtComentario.text = a
+                evalucacion9 = a!
             }
             
         }
@@ -38,4 +39,9 @@ class InspeccionGeneral: UIView, UITextFieldDelegate, UITextViewDelegate {
     func textViewDidEndEditing(_ textView: UITextView) {
         evalucacion9 = (textView.text as! NSString).description
     }
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        evalucacion9 = (textView.text as! NSString).description
+        return true
+    }
+    
 }

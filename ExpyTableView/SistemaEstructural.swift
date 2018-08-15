@@ -140,7 +140,7 @@ class SistemaEstructural: UIView, UITextFieldDelegate, UITextViewDelegate {
         
         if  !idFichaConsultada.isEmpty {
             var a = idFichaConsultada.first?.value(forKeyPath: "evalucacion42") as? String
-            if !(a == "") {
+            if (a != "" && a != nil) {
                 comentarios.text = a
             }
         }

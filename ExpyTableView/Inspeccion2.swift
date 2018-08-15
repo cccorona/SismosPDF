@@ -43,7 +43,7 @@ class Inspeccion2: UIView {
                 a = ""
             }
 //            a = idFichaConsultada.first?.value(forKeyPath: "evalucacion47") as? String
-            if !(a == "") {
+            if (a != "" && a != nil) {
                 lblLeve.text = a
             } else {
                 lblLeve.text = "0"
@@ -55,7 +55,7 @@ class Inspeccion2: UIView {
                 a = ""
             }
 //            a = idFichaConsultada.first?.value(forKeyPath: "evalucacion48") as? String
-            if !(a == "") {
+            if (a != "" && a != nil) {
                 lblModerado.text = a
             } else {
                 lblModerado.text = "0"
@@ -67,7 +67,7 @@ class Inspeccion2: UIView {
                 a = ""
             }
 //            a = idFichaConsultada.first?.value(forKeyPath: "evalucacion49") as? String
-            if !(a == "") {
+            if (a != "" && a != nil) {
                 lblFuerte.text = a
             } else {
                 lblFuerte.text = "0"
@@ -79,7 +79,7 @@ class Inspeccion2: UIView {
                 a = ""
             }
 //            a = idFichaConsultada.first?.value(forKeyPath: "evalucacion50") as? String
-            if !(a == "") {
+            if (a != "" && a != nil) {
                 lblSevero.text = a
             } else {
                 lblSevero.text = "0"

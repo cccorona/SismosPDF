@@ -24,12 +24,14 @@ class RecomendacionesIniciales: UIView, UITextFieldDelegate, UITextViewDelegate 
         txtCoordenadas.delegate = self
         if  !idFichaConsultada.isEmpty {
             var a = idFichaConsultada.first?.value(forKeyPath: "evalucacion55") as? String
-            if !(a == "") {
+            if (a != "" && a != nil) {
                 txtCoordenadas.text = a
+                evalucacion55 = a!
             }
             a = idFichaConsultada.first?.value(forKeyPath: "evalucacion56") as? String
-            if !(a == "") {
+            if (a != "" && a != nil) {
                 txtArea.text = a
+                evalucacion56 = a!
             }
         }
         VistaVisual.layer.borderWidth = 1
@@ -50,5 +52,10 @@ class RecomendacionesIniciales: UIView, UITextFieldDelegate, UITextViewDelegate 
     
     func textViewDidEndEditing(_ textView: UITextView) {
         evalucacion55 = (textView.text as! NSString).description // RECOMENDACIONES recomendaciones
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        evalucacion55 = (textView.text as! NSString).description // RECOMENDACIONES recomendaciones
+        return true
     }
 }

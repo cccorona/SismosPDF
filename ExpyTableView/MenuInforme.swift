@@ -269,9 +269,6 @@ class MenuInforme: UIViewController {
             }))
             self.present(alertController, animated: true, completion: nil)
             
-            
-            
-//            self.AgregraEdificio ()
         }))
         
         errorAlert.addAction(UIAlertAction(title: "No", style: .cancel, handler: {
@@ -334,7 +331,11 @@ class MenuInforme: UIViewController {
         let OrdenEstado = NSSortDescriptor(key: "idficha", ascending: true)
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Ficha")
         request.sortDescriptors = [OrdenEstado]
-        request.predicate = NSPredicate(format: "idficha = %@", idFichaPrincipal )
+        var fichaReference = idFichaPrincipal
+        if fichaReference == ""{
+            fichaReference = idFicha
+        }
+        request.predicate = NSPredicate(format: "idficha = %@", fichaReference )
         request.returnsObjectsAsFaults = false
         var info1 = ""
         var info2 = ""
@@ -364,42 +365,20 @@ class MenuInforme: UIViewController {
         var info24 = ""
         var NombreAnterior = ""
         
+        var region = ""
+        var provincia = ""
+        var tipoDesastre = ""
+        var tipoEmergencia = ""
+        var titular = ""
+        var descripcionDesastre = ""
+        
         
         do {
             let result = try context.fetch(request)
             for data in result as! [NSManagedObject] {
-                //                let Vec1 = [data.value(forKey: "folio") as! String, data.value(forKey: "estado") as! String, data.value(forKey: "idficha") as! String ]
                 print(data.value(forKey: "idficha") as! String)
-//                if let info = dato.object(forKey: "nombre") as? String {
-                    NombreAnterior = data.value(forKey: "nombre") as! String
-//                }
+                NombreAnterior = data.value(forKey: "nombre") as! String
                 
-//                if let a = data.value(forKey: "informe1") {
-//                    info1 = data.value(forKey: "informe1") as! String
-//                } else {
-//                    info1 = ""
-//                }
-//                if let a = data.value(forKey: "informe2") {
-//                    info2 = data.value(forKey: "informe2") as! String
-//                } else {
-//                    info2 = ""
-//                }
-//                if let a = data.value(forKey: "informe3") {
-//                    info3 = data.value(forKey: "informe3") as! String
-//                } else {
-//                    info3 = ""
-//                }
-//                if let a = data.value(forKey: "informe4") {
-//                    info4 = data.value(forKey: "informe4") as! String
-//                } else {
-//                    info4 = ""
-//                }
-//                if let a = data.value(forKey: "informe5") {
-//                    info5 = data.value(forKey: "informe5") as! String
-//                } else {
-//                    info5 = ""
-//                }
-                // se optiene la iformacion general de escritorio
                 if let info = dato.object(forKey: "informe1FichaInsPec") as? String {
                     info1 = info
                 }
@@ -519,9 +498,36 @@ class MenuInforme: UIViewController {
                     info24 = ""
                 }
                 
-                
-                
-                
+                if let a = data.value(forKey: "informe2") {
+                    region = data.value(forKey: "informe2") as! String
+                } else {
+                    region = ""
+                }
+                if let a = data.value(forKey: "informe3") {
+                    provincia = data.value(forKey: "informe3") as! String
+                } else {
+                    provincia = ""
+                }
+                if let a = data.value(forKey: "informe4") {
+                    tipoDesastre = data.value(forKey: "informe4") as! String
+                } else {
+                    tipoDesastre = ""
+                }
+                if let a = data.value(forKey: "informe5") {
+                    tipoEmergencia = data.value(forKey: "informe5") as! String
+                } else {
+                    tipoEmergencia = ""
+                }
+                if let a = data.value(forKey: "evalucacion58") {
+                    titular = data.value(forKey: "evalucacion58") as! String
+                } else {
+                    titular = ""
+                }
+                if let a = data.value(forKey: "evalucacion59") {
+                    descripcionDesastre = data.value(forKey: "evalucacion59") as! String
+                } else {
+                    descripcionDesastre = ""
+                }
             }
             //            let Ultimaficha = result[result.count - 1].
             
@@ -595,6 +601,12 @@ class MenuInforme: UIViewController {
             newUser.setValue(info23, forKey: "identificacion17")
             newUser.setValue(info24, forKey: "identificacion18")
             
+            newUser.setValue(descripcionDesastre, forKey: "evalucacion59")
+            newUser.setValue(titular, forKey: "evalucacion58")
+            newUser.setValue(tipoEmergencia, forKey: "informe5")
+            newUser.setValue(tipoDesastre, forKey: "informe4")
+            newUser.setValue(provincia, forKey: "informe3")
+            newUser.setValue(region, forKey: "informe2")
             
             
             do {
@@ -649,10 +661,10 @@ class MenuInforme: UIViewController {
             idFichaConsultada.removeAll(keepingCapacity: true)
             idFichaConsultada.removeAll()
             folio = ""
-            var dateStringFormatter = DateFormatter()
+            let dateStringFormatter = DateFormatter()
             dateStringFormatter.dateFormat = "yyMMdd"
             let date = Date()
-            var fecha1 = dateStringFormatter.string(from: date) + "-"
+            let fecha1 = dateStringFormatter.string(from: date) + "-"
             dateStringFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss-'00:00'"
             dateStringFormatter.locale = Locale(identifier:"es_cl")
             FechaFormato = dateStringFormatter.string(from: date)

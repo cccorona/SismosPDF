@@ -52,30 +52,30 @@ class EvaluacionSecciones: UIViewController {
             
             if  !idFichaConsultada.isEmpty {
                 var a = idFichaConsultada.first?.value(forKeyPath: "evalucacion36") as? String
-                if !(a == "") {
+                if (a != "" && a != nil) {
                     VistaCelda.btnHormigon.setTitle(a, for: UIControlState.normal)
                 }
                 a = idFichaConsultada.first?.value(forKeyPath: "evalucacion37") as? String
-                if !(a == "") {
+                if (a != "" && a != nil) {
                     VistaCelda.btnAlba1.setTitle(a, for: UIControlState.normal)
                 }
                 
                 a = idFichaConsultada.first?.value(forKeyPath: "evalucacion38") as? String
-                if !(a == "") {
+                if (a != "" && a != nil) {
                     VistaCelda.btnAlba2.setTitle(a, for: UIControlState.normal)
                 }
                 
                 a = idFichaConsultada.first?.value(forKeyPath: "evalucacion39") as? String
-                if !(a == "") {
+                if (a != "" && a != nil) {
                     VistaCelda.btnAcero1.setTitle(a, for: UIControlState.normal)
                 }
                 
                 a = idFichaConsultada.first?.value(forKeyPath: "evalucacion40") as? String
-                if !(a == "") {
+                if (a != "" && a != nil) {
                     VistaCelda.btnAcero2.setTitle(a, for: UIControlState.normal)
                 }
                 a = idFichaConsultada.first?.value(forKeyPath: "evalucacion41") as? String
-                if !(a == "") {
+                if (a != "" && a != nil) {
                     VistaCelda.btnMadera.setTitle(a, for: UIControlState.normal)
                 }
             }
@@ -90,7 +90,7 @@ class EvaluacionSecciones: UIViewController {
             VistaCelda1.btnSeleccionar.addTarget(self, action: #selector(EjecutarBtn(_:)), for: .touchUpInside)
             if  !idFichaConsultada.isEmpty {
                 var a = idFichaConsultada.first?.value(forKeyPath: "evalucacion43") as? String
-                if !(a == "") {
+                if (a != "" && a != nil) {
                     VistaCelda1.btnSeleccionar.setTitle(a, for: UIControlState.normal)
                 }
             }
@@ -107,7 +107,7 @@ class EvaluacionSecciones: UIViewController {
                 
                 
                 var a = idFichaConsultada.first?.value(forKeyPath: "evalucacion45") as? String
-                if !(a == "") {
+                if (a != "" && a != nil) {
                     VistaCelda2.btnSeleccionar.setTitle(a, for: UIControlState.normal)
                 }
             }
@@ -139,7 +139,7 @@ class EvaluacionSecciones: UIViewController {
             
 //            if  !idFichaConsultada.isEmpty {
 //                var a = idFichaConsultada.first?.value(forKeyPath: "evalucacion51") as? String
-//                if !(a == "") {
+//                if (a != "" && a != nil) {
 //                    VistaCelda3.btnSeleccionar.setTitle(a, for: UIControlState.normal)
 //                }
 //            }

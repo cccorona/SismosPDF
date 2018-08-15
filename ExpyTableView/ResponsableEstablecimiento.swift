@@ -37,17 +37,17 @@ class ResponsableEstablecimiento: UIView, UITextFieldDelegate {
         self.VistaTelefono.layer.borderColor = UIColor.black.cgColor
         if  !idFichaConsultada.isEmpty {
             var a = idFichaConsultada.first?.value(forKeyPath: "identificacion6") as? String
-            if !(a == "") {
+            if (a != "" && a != nil) {
                 txtNombre.text = a
             }
             
             a = idFichaConsultada.first?.value(forKeyPath: "identificacion7") as? String
-            if !(a == "") {
+            if (a != "" && a != nil) {
                 txtEmail.text = a
             }
             
             a = idFichaConsultada.first?.value(forKeyPath: "identificacion8") as? String
-            if !(a == "") {
+            if (a != "" && a != nil) {
                 txtTelefono.text = a
             }
         }

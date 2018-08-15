@@ -24,7 +24,7 @@ class NombreEstablecimiento: UIView, UITextFieldDelegate {
         self.VistaTexto.layer.borderColor = UIColor.black.cgColor
         if  !idFichaConsultada.isEmpty {
             let a = idFichaConsultada.first?.value(forKeyPath: "identificacion3") as? String
-            if !(a == "") {
+            if (a != "" && a != nil) {
                 txtNombreEstablecimiento.text = a
             }
         }
