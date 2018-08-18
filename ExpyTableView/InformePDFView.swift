@@ -839,7 +839,7 @@ extension InformePDFView: UITableViewDataSource, UITableViewDelegate{
             case 1:
                 let var1 = dato.value(forKey: "AppPatfichains") ?? ""
                 let var2 = dato.value(forKey: "institucionfichains") ?? ""
-                cell.setData("Apellido Paterno", data2: var1 as? String ?? "", data3: "instrucción", data4: var2 as? String ?? "")
+                cell.setData("Apellido Paterno", data2: var1 as? String ?? "", data3: "Institución", data4: var2 as? String ?? "")
                 cell.setBold(label: 1)
                 cell.setBold(label: 3)
                 break;
