@@ -34,15 +34,15 @@ class TomarFoto: UIView, UIImagePickerControllerDelegate,UINavigationControllerD
         Imagen3.isUserInteractionEnabled = true
 
 
-        if !(foto1 == nil) {
+        if (foto1 != nil) {
             let image = UIImage(data: foto1! as Data)
             Imagen1.image = image
         }
-        if !(foto2 == nil) {
+        if (foto2 != nil) {
             let image = UIImage(data: foto2! as Data)
             Imagen2.image = image
         }
-        if !(foto3 == nil)  {
+        if (foto3 != nil)  {
             let image = UIImage(data: foto3! as Data)
             Imagen3.image = image
         }

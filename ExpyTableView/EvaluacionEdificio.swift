@@ -41,6 +41,10 @@ class EvaluacionEdificio: UIViewController {
         self.VistaBar.layer.borderColor = UIColor.black.cgColor
         self.VistaBar.layer.borderWidth = 1
         self.VistaBar.layer.borderColor = UIColor.black.cgColor
+        
+        foto1 = nil
+        foto2 = nil
+        foto3 = nil
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -900,15 +904,6 @@ extension EvaluacionEdificio {
                 VistaCelda.btnSeleccionar.addTarget(self, action: #selector(EjecutarBtn(_:)), for: .touchUpInside)
                 
                 
-                if  !idFichaConsultada.isEmpty {
-                    var a = idFichaConsultada.first?.value(forKeyPath: "evalucacion8") as? String
-                    if (a != "" && a != nil) {
-                        VistaCelda.btnSeleccionar.setTitle(a, for: UIControlState.normal)
-                        VistaCelda.btnEdicion.setTitle(a, for: UIControlState.normal)
-                        evalucacion8 = a!
-                    }
-                    
-                }
                 //    var EvaluacionA = 0
                 //    var EvaluacionB = 0
                 //    var EvaluacionC = 0
@@ -939,7 +934,15 @@ extension EvaluacionEdificio {
                     }
                     BanderaCambio = 0
                 } else{
-                
+                    if  !idFichaConsultada.isEmpty {
+                        var a = idFichaConsultada.first?.value(forKeyPath: "evalucacion8") as? String
+                        if (a != "" && a != nil) {
+                            VistaCelda.btnSeleccionar.setTitle(a, for: UIControlState.normal)
+                            VistaCelda.btnEdicion.setTitle(a, for: UIControlState.normal)
+                            evalucacion8 = a!
+                        }
+                        
+                    }
                     if ((evalucacion8 == "Inseguro")  ||  EvaluacionC > 0) {
                         evalucacion8 = "Inseguro"
                         VistaCelda.btnSeleccionar.setTitle("Inseguro de inspeccionar", for: UIControlState.normal)

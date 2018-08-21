@@ -259,13 +259,13 @@ class Escritorio: UIViewController {
                 
                 alertController.addAction(UIAlertAction(title: "Nueva ficha", style: .cancel, handler: {
                     alert -> Void in
-                    self.ConsultaFichasNueva ()
+                    self.CrearFichaDesdeInformePrevio ()
                     
                 }))
                 self.present(alertController, animated: true, completion: nil)
                 
             } else {
-              self.ConsultaFichasNueva ()
+              self.CrearFichaDesdeInformePrevio ()
             }
             
         } catch let error as NSError {
@@ -412,7 +412,155 @@ class Escritorio: UIViewController {
         }
         
     }
-    
+    func CrearFichaDesdeInformePrevio (){
+        
+        idFichaConsultada.removeAll(keepingCapacity: true)
+        idFichaConsultada.removeAll()
+        let OrdenEstado = NSSortDescriptor(key: "idficha", ascending: true)
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Ficha")
+        request.sortDescriptors = [OrdenEstado]
+        //request.predicate = NSPredicate(format: "age = %@", "12")
+        request.returnsObjectsAsFaults = false
+        var info1 = ""
+        var info2 = ""
+        var info3 = ""
+        var info4 = ""
+        var info5 = ""
+        var info6 = ""
+        var evaluacion58 = ""
+        var evaluacion59 = ""
+        do {
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject] {
+                //                print(data.value(forKey: "idficha") as! String)
+                //                // se optiene la iformacion general de escritorio
+                if let info = data.value(forKey: "informe1") as? String {
+                    info1 = info
+                }
+                if let info = data.value(forKey: "informe2") as? String {
+                    info2 = info
+                }
+                if let info = data.value(forKey: "informe3") as? String {
+                    info3 = info
+                }
+                if let info = data.value(forKey: "informe4") as? String {
+                    info4 = info
+                }
+                if let info = data.value(forKey: "informe5") as? String {
+                    info5 = info
+                }
+                if let info = data.value(forKey: "evalucacion58") as? String {
+                    evaluacion58 = info
+                }
+                if let info = data.value(forKey: "evalucacion59") as? String {
+                    evaluacion59 = info
+                }
+                info6 = data.value(forKey: "idficha") as! String
+                //
+            }
+            
+            
+            
+            let dateStringFormatter = DateFormatter()
+            dateStringFormatter.locale = Locale(identifier:"es_cl")
+            dateStringFormatter.dateFormat = "yyMMdd"
+            let date = Date()
+            let fecha1 = dateStringFormatter.string(from: date) + "-"
+            dateStringFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss-'00:00'" //yyyy-MM-dd'T'HH:mm:ssZZZZ"
+            
+            
+            FechaFormato = dateStringFormatter.string(from: date)
+            idFicha = dateStringFormatter.string(from: date) + "-"
+            
+            
+            if let name = dato.object(forKey: "nombrefichains") as? String {
+                let indexStartOfText = name.index(name.startIndex, offsetBy: 0)
+                self.folio = String(name[...indexStartOfText])
+            }
+            if let name = dato.object(forKey: "AppPatfichains") as? String {
+                let indexStartOfText = name.index(name.startIndex, offsetBy: 0)
+                self.folio = self.folio + String(name[...indexStartOfText])
+            }
+            
+            if let name = dato.object(forKey: "AppMatfichains") as? String {
+                let indexStartOfText = name.index(name.startIndex, offsetBy: 0)
+                self.folio = self.folio + String(name[...indexStartOfText])
+            }
+            
+            if folio.isEmpty {
+                self.folio =  "NA-"
+            } else {
+                self.folio = self.folio + "-"
+            }
+            
+            self.folio = fecha1  + folio +  NombreFicha //+ "-"
+            NombreFicha = self.folio
+            //                }
+            print(folio)
+            print(idFicha)
+            
+            let entity = NSEntityDescription.entity(forEntityName: "Ficha", in: context)
+            let newUser = NSManagedObject(entity: entity!, insertInto: context)
+            newUser.setValue("1", forKey: "estado")
+            newUser.setValue(folio, forKey: "folio")
+            NombreFicha = self.folio
+            newUser.setValue(idFicha, forKey: "idficha")
+            newUser.setValue(info1, forKey: "informe1")
+            newUser.setValue(info2, forKey: "informe2")
+            newUser.setValue(info3, forKey: "informe3")
+            newUser.setValue(info4, forKey: "informe4")
+            newUser.setValue(info5, forKey: "informe5")
+            newUser.setValue(evaluacion58, forKey: "evalucacion58")
+            newUser.setValue(evaluacion59, forKey: "evalucacion59")
+            newUser.setValue(NombreOriginal, forKey: "nombre")
+            newUser.setValue(FechaFormato, forKey: "fecha")
+            
+            idFichaPrincipal = idFicha
+            
+            do {
+                try context.save()
+            } catch {
+                print("Failed saving")
+            }
+            
+            
+            
+        } catch {
+            
+            print("Failed")
+        }
+        
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Ficha")
+        fetchRequest.predicate = NSPredicate(format: "idficha = %@", idFicha )
+        
+        //3
+        do {
+            idFichaConsultada = try managedContext.fetch(fetchRequest)
+            //            for registro in idFichaConsultada {
+            //                idFicha = (registro.value(forKeyPath: "idficha") as? String)!
+            //                //                let a = registro.value(forKeyPath: "folio") as? String
+            //                //                let b = registro.value(forKeyPath: "estado") as? String
+            //                //                let c = registro.value(forKeyPath: "idficha") as? String
+            //                //                print(a , b , c)
+            //            }
+            
+            let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
+            let vc: MenuInforme = storyboard.instantiateViewController(withIdentifier: "menuinforme") as! MenuInforme
+            self.present(vc, animated: false, completion: nil)
+            
+            
+            
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        
+    }
     
     
     func RemplazaFichasNueva (){

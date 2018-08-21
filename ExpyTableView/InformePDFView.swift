@@ -387,15 +387,17 @@ class InformePDFView: UIView {
         attributedText4.addAttribute(NSUnderlineStyleAttributeName , value: NSUnderlineStyle.styleSingle.rawValue, range: textRange4)
         alcanceLbl.attributedText = attributedText4
         
-        
+        foto1 = nil
         var a = currentInformation.value(forKeyPath: "foto1") as? NSData
         if !(a == nil) {
             foto1 = a
         }
+        foto2 = nil
         a = currentInformation.value(forKeyPath: "foto2") as? NSData
         if !(a == nil) {
             foto2 = a
         }
+        foto3 = nil
         a = currentInformation.value(forKeyPath: "foto3") as? NSData
         if !(a == nil) {
             foto3 = a
@@ -541,6 +543,20 @@ extension InformePDFView: UITableViewDataSource, UITableViewDelegate{
             if indexPath.row == 0{
                 let cell = tableView.dequeueReusableCell(withIdentifier: "OneSpaceTblViewCell", for: indexPath) as! OneSpaceTblViewCell
                 cell.setData("4.1 General")
+                return cell
+            }
+            if indexPath.row == 4{
+                let cell = tableView.dequeueReusableCell(withIdentifier: "OneSpaceTblViewCell", for: indexPath) as! OneSpaceTblViewCell
+                let var1 = currentInformation.value(forKey: "evalucacion9") ?? ""
+                let theString = "Comentarios\n\(var1 as? String ?? "")" as NSString
+                let theAttributedString = NSMutableAttributedString(string: theString as String)
+                
+                let boldString = "Comentarios"
+                let boldRange = theString.range(of: boldString)
+                let font = UIFont.boldSystemFont(ofSize: 20)
+                
+                theAttributedString.addAttribute(NSFontAttributeName, value: font, range: boldRange)
+                cell.value1Lbl.attributedText = theAttributedString
                 return cell
             }
             let cell = tableView.dequeueReusableCell(withIdentifier: "SixSpaceTblViewCell", for: indexPath) as! SixSpaceTblViewCell
@@ -887,7 +903,7 @@ extension InformePDFView: UITableViewDataSource, UITableViewDelegate{
             return 3
         }
         if tblView4 == tableView{
-            return 4
+            return 5
         }
         if tblView42 == tableView{
             return 9

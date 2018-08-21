@@ -363,6 +363,8 @@ class MenuInforme: UIViewController {
         var info22 = ""
         var info23 = ""
         var info24 = ""
+        var latitud = ""
+        var longitud = ""
         var NombreAnterior = ""
         
         var region = ""
@@ -498,10 +500,16 @@ class MenuInforme: UIViewController {
                     info24 = ""
                 }
                 
-                if let a = data.value(forKey: "informe2") {
-                    region = data.value(forKey: "informe2") as! String
+                if let a = data.value(forKey: "latitud") {
+                    latitud = data.value(forKey: "latitud") as! String
                 } else {
-                    region = ""
+                    latitud = ""
+                }
+                
+                if let a = data.value(forKey: "longitud") {
+                    longitud = data.value(forKey: "longitud") as! String
+                } else {
+                    longitud = ""
                 }
                 if let a = data.value(forKey: "informe3") {
                     provincia = data.value(forKey: "informe3") as! String
@@ -607,6 +615,8 @@ class MenuInforme: UIViewController {
             newUser.setValue(tipoDesastre, forKey: "informe4")
             newUser.setValue(provincia, forKey: "informe3")
             newUser.setValue(region, forKey: "informe2")
+            newUser.setValue(latitud, forKey: "latitud")
+            newUser.setValue(longitud, forKey: "longitud")
             
             
             do {
