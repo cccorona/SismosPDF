@@ -147,6 +147,7 @@ class MenuInforme: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         let checkProgress = CheckCoreData()
         checkProgress.checkProgress()
+        checkProgress.clearVars()
         Barra.value = CGFloat(AvanceFicha)
         Nombre.text = NombreFicha
     }

@@ -309,6 +309,7 @@ class Escritorio: UIViewController {
 //                    info5 = info
 //                }
                 info6 = data.value(forKey: "idficha") as! String
+                
 //
             }
 

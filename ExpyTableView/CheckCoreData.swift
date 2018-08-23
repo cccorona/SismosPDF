@@ -10,11 +10,38 @@ import UIKit
 import CoreData
 
 class CheckCoreData: NSObject {
+    
+    func clearVars(){
+        informe4 = ""
+        informe5 = ""
+        identificacion3 = ""
+        latitud = ""
+        longitud = ""
+        identificacion2 = ""
+        identificacion3 = ""
+        identificacion4 = ""
+        identificacion5 = ""
+        identificacion6 = ""
+        identificacion7 = ""
+        identificacion8 = ""
+        identificacion9 = ""
+        identificacion10 = ""
+        identificacion11 = ""
+        identificacion12 = ""
+        identificacion13 = ""
+        identificacion14 = ""
+        identificacion15 = ""
+        identificacion17 = ""
+        identificacion18 = ""
+        evalucacion57 = ""
+        evalucacion58 = ""
+        evalucacion59 = ""
+        evalucacion6 = ""
+        evalucacion7 = ""
+    }
 
     func checkProgress(){
         AvanceFicha = 0
-        
-        
         
         var currentInformation: NSDictionary!
         var inspeccion44: [NSDictionary]!
@@ -147,9 +174,10 @@ class CheckCoreData: NSObject {
         if (info.object(forKey: "informe4") as? String) == ""{
             result = false
         }
-        if (info.object(forKey: "informe5") as? String) == ""{
-            result = false
-        }
+        //Se removio Descripción detallada
+//        if (info.object(forKey: "informe5") as? String) == ""{
+//            result = false
+//        }
         return result
     }
     
@@ -190,17 +218,19 @@ class CheckCoreData: NSObject {
         if (info.object(forKey: "identificacion12") as? String) == "" || (info.object(forKey: "identificacion12") as? String)  == nil{
             result = false
         }
-        if (info.object(forKey: "identificacion13") as? String) == "" || (info.object(forKey: "identificacion13") as? String)  == nil{
-            result = false
-        }
-        if (info.object(forKey: "identificacion14") as? String) == "" || (info.object(forKey: "identificacion14") as? String)  == nil{
-            result = false
-        }
+        //Se quita el parametro dirección 2 y dirección 3 de la barra de progreso
+//        if (info.object(forKey: "identificacion13") as? String) == "" || (info.object(forKey: "identificacion13") as? String)  == nil{
+//            result = false
+//        }
+//        if (info.object(forKey: "identificacion14") as? String) == "" || (info.object(forKey: "identificacion14") as? String)  == nil{
+//            result = false
+//        }
         //identificacion15 == Accesibilidad -> Se le permite el parametro otro
         if (info.object(forKey: "identificacion15") as? String) == ""{
             result = false
         }else{
-            if ((info.object(forKey: "identificacion15") as? NSString)?.uppercased == "OTRO") && ((info.object(forKey: "identificacion16") as? String) == ""){
+            if ((info.object(forKey: "identificacion15") as? NSString)?.uppercased == "OTRO") &&
+                ((info.object(forKey: "identificacion16") as? String) == ""){
                 result = false
             }
         }
@@ -208,7 +238,8 @@ class CheckCoreData: NSObject {
         if (info.object(forKey: "identificacion17") as? String) == ""{
             result = false
         }else{
-            if ((info.object(forKey: "identificacion17") as? NSString)?.uppercased == "OTRO") && ((info.object(forKey: "identificacion18") as? String) == ""){
+            if ((info.object(forKey: "identificacion17") as? NSString)?.uppercased == "OTRO") &&
+                ((info.object(forKey: "identificacion18") as? String) == ""){
                 result = false
             }
         }
@@ -248,9 +279,9 @@ class CheckCoreData: NSObject {
         if (info.object(forKey: "evalucacion54") as? String) == "" || (info.object(forKey: "evalucacion54") as? String)  == nil{
             result = false
         }
-        if (info.object(forKey: "evalucacion55") as? String) == "" || (info.object(forKey: "evalucacion55") as? String)   == nil{
-            result = false
-        }
+//        if (info.object(forKey: "evalucacion55") as? String) == "" || (info.object(forKey: "evalucacion55") as? String)   == nil{
+//            result = false
+//        }
         if (info.object(forKey: "evalucacion56") as? String) == "" || (info.object(forKey: "evalucacion56") as? String)  == nil{
             result = false
         }
