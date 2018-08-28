@@ -250,7 +250,7 @@ class InformePDFView: UIView {
         
         var statusEvaluation = 0
         let fetchRequest3 = NSFetchRequest<NSManagedObject>(entityName: "Insp3")
-        fetchRequest2.predicate = NSPredicate(format: "idficha = %@", idFicha )
+        fetchRequest3.predicate = NSPredicate(format: "idficha = %@", idFicha )
         let OrdenEstado = NSSortDescriptor(key: "num_letra", ascending: true)
         fetchRequest.sortDescriptors = [OrdenEstado]
         do {
@@ -260,19 +260,6 @@ class InformePDFView: UIView {
                     let key = Array(managedObject.entity.attributesByName.keys)
                     inspeccion46.append(managedObject.dictionaryWithValues(forKeys: key) as NSDictionary)
                 }
-                var filerInspeccion = [NSDictionary]()
-                for inspeccion in inspeccion46{
-                    var add = true
-                    for newInspeccion in filerInspeccion{
-                        if (inspeccion.value(forKey: "elemento") as! String) == (newInspeccion.value(forKey: "elemento") as! String){
-                            add = false
-                        }
-                    }
-                    if add{
-                        filerInspeccion.append(inspeccion)
-                    }
-                }
-                inspeccion46 = filerInspeccion
                 for dic in inspeccion46{
                     let respuesta = dic.value(forKey: "num_resp") as! Int
                     if respuesta > statusEvaluation{

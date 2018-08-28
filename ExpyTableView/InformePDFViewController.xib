@@ -46,37 +46,37 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="753" text="FICHA DE INSPECCIÓN RÁPIDA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6a-CU-cia">
-                                    <rect key="frame" x="159" y="16" width="434" height="20"/>
+                                    <rect key="frame" x="159" y="16" width="434" height="19"/>
                                     <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="16"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="EDIFICOS PÚBLICOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4y6-pm-ghK">
-                                    <rect key="frame" x="159" y="35" width="434" height="20"/>
+                                    <rect key="frame" x="159" y="35" width="434" height="19"/>
                                     <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="16"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="DIRECCIÓN DE ARQUITECTURA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oK-73-j87">
-                                    <rect key="frame" x="159" y="68.5" width="434" height="15"/>
+                                    <rect key="frame" x="159" y="67" width="434" height="17.5"/>
                                     <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MINISTERIO DE OBRAS PÚBLICAS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCY-Vj-NgC">
-                                    <rect key="frame" x="159" y="85.5" width="434" height="15"/>
+                                    <rect key="frame" x="159" y="86.5" width="434" height="17.5"/>
                                     <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="180406-MJR-ficha_terremoto-valpo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QO6-Da-Sh6">
-                                    <rect key="frame" x="267" y="125.5" width="326" height="15"/>
+                                    <rect key="frame" x="267" y="124.5" width="326" height="17.5"/>
                                     <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FECHA EMISIÓN: 19-04-2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4L5-eo-dyH">
-                                    <rect key="frame" x="610" y="16" width="200" height="18.5"/>
+                                    <rect key="frame" x="610" y="16" width="200" height="17.5"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="200" id="ZhB-0c-nVh"/>
                                     </constraints>
@@ -95,13 +95,13 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxt-S6-t3v">
-                                    <rect key="frame" x="610" y="128" width="200" height="14"/>
+                                    <rect key="frame" x="610" y="125.5" width="200" height="16.5"/>
                                     <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COD.INFORME:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1TP-TB-gGu">
-                                    <rect key="frame" x="159" y="123.5" width="100" height="18.5"/>
+                                    <rect key="frame" x="159" y="124.5" width="100" height="17.5"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="100" id="OOx-o4-nP8"/>
                                     </constraints>
@@ -206,13 +206,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="264.5" height="128"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A = INSPECCIONADO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ful-hE-bF0">
-                                            <rect key="frame" x="10" y="20" width="244.5" height="18.5"/>
+                                            <rect key="frame" x="10" y="20" width="244.5" height="17.5"/>
                                             <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Implica que el edificio evaluado no presenta indicios visibles de deterioro" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="JKX-Ux-x3L">
-                                            <rect key="frame" x="10" y="46.5" width="244.5" height="73.5"/>
+                                            <rect key="frame" x="10" y="45.5" width="244.5" height="74.5"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -233,13 +233,13 @@
                                     <rect key="frame" x="264.5" y="0.0" width="265" height="128"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B = INGRESO LIMITADO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8G-Ls-f6D">
-                                            <rect key="frame" x="10" y="20" width="245" height="18.5"/>
+                                            <rect key="frame" x="10" y="20" width="245" height="17.5"/>
                                             <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Implica que el edificio evaluado presenta indicios de deterioro que podrían ser peligrosos para los usuarios." textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="kQk-es-ynI">
-                                            <rect key="frame" x="10" y="46.5" width="245" height="73.5"/>
+                                            <rect key="frame" x="10" y="45.5" width="245" height="74.5"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -260,13 +260,13 @@
                                     <rect key="frame" x="529.5" y="0.0" width="264.5" height="128"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C = INSEGURO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxW-rk-FA9">
-                                            <rect key="frame" x="10" y="20" width="244.5" height="18.5"/>
+                                            <rect key="frame" x="10" y="20" width="244.5" height="17.5"/>
                                             <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Implica que el edificio evaluado cuenta con deterioro evidente que pone en peligro a los usuarios" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Z0s-lf-6Kv">
-                                            <rect key="frame" x="10" y="46.5" width="244.5" height="73.5"/>
+                                            <rect key="frame" x="10" y="45.5" width="244.5" height="74.5"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -437,7 +437,7 @@
                             </constraints>
                         </tableView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.5 INSPECCIÓN 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmB-7L-XFc">
-                            <rect key="frame" x="20" y="406" width="794" height="21"/>
+                            <rect key="frame" x="20" y="396.5" width="794" height="21"/>
                             <color key="backgroundColor" red="0.6705882353" green="0.63529411759999999" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="EKR-UA-FkT"/>
@@ -447,14 +447,14 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <tableView clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GJ6-nt-j9o">
-                            <rect key="frame" x="20" y="427.5" width="794" height="350"/>
+                            <rect key="frame" x="20" y="418" width="794" height="350"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="350" id="5gU-ip-IK1"/>
                             </constraints>
                         </tableView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.6 INSPECCIÓN 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7T-6w-rVf">
-                            <rect key="frame" x="20" y="797" width="794" height="21"/>
+                            <rect key="frame" x="20" y="778" width="794" height="21"/>
                             <color key="backgroundColor" red="0.6705882353" green="0.63529411759999999" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="sjm-3r-600"/>
@@ -464,7 +464,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vW9-hz-7cn">
-                            <rect key="frame" x="20" y="818.5" width="794" height="400"/>
+                            <rect key="frame" x="20" y="799.5" width="794" height="400"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="400" id="7UY-ZQ-hzc"/>
@@ -592,10 +592,10 @@
                 <constraint firstItem="Qpf-vJ-nmn" firstAttribute="top" secondItem="TsY-en-DpN" secondAttribute="bottom" constant="20" id="lHB-un-j9j"/>
                 <constraint firstItem="Op7-lG-v7L" firstAttribute="trailing" secondItem="XGe-NQ-2fN" secondAttribute="trailing" constant="20" id="lRP-lw-lPD"/>
                 <constraint firstItem="EuE-MC-pfY" firstAttribute="top" secondItem="Igd-td-WGM" secondAttribute="bottom" constant="20" id="lp9-yA-52P"/>
-                <constraint firstItem="N7T-6w-rVf" firstAttribute="top" secondItem="GJ6-nt-j9o" secondAttribute="bottom" constant="20" id="m1D-Rb-8Yz"/>
+                <constraint firstItem="N7T-6w-rVf" firstAttribute="top" secondItem="GJ6-nt-j9o" secondAttribute="bottom" constant="10" id="m1D-Rb-8Yz"/>
                 <constraint firstItem="Op7-lG-v7L" firstAttribute="trailing" secondItem="KLa-ym-USa" secondAttribute="trailing" constant="20" id="m8c-Wt-4G6"/>
                 <constraint firstItem="Op7-lG-v7L" firstAttribute="trailing" secondItem="Igd-td-WGM" secondAttribute="trailing" constant="20" id="mJH-zD-rvC"/>
-                <constraint firstItem="gmB-7L-XFc" firstAttribute="top" secondItem="BOu-ZG-19Z" secondAttribute="bottom" constant="20" id="mTD-r9-FkQ"/>
+                <constraint firstItem="gmB-7L-XFc" firstAttribute="top" secondItem="BOu-ZG-19Z" secondAttribute="bottom" constant="10" id="mTD-r9-FkQ"/>
                 <constraint firstItem="BOu-ZG-19Z" firstAttribute="leading" secondItem="Op7-lG-v7L" secondAttribute="leading" constant="20" id="n7Y-xN-UAA"/>
                 <constraint firstItem="5SF-te-yWE" firstAttribute="leading" secondItem="Op7-lG-v7L" secondAttribute="leading" constant="20" id="nWb-gm-Si8"/>
                 <constraint firstItem="Op7-lG-v7L" firstAttribute="trailing" secondItem="SlT-o8-fKV" secondAttribute="trailing" constant="20" id="q5E-Oo-Ijx"/>

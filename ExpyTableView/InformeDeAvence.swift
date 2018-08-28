@@ -425,6 +425,17 @@ class InformeDeAvence: UIViewController, UITableViewDataSource, UITableViewDeleg
         // let dst = URL(fileURLWithPath: NSTemporaryDirectory().appending("informe.pdf"))
         RutaPDF = filename.path
         
+        //       TODO: Solo para fines de testing
+        var scrollView: UIScrollView!
+        scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
+        scrollView.contentSize = CGSize(width: self.view.frame.width*3, height: 6000)
+        scrollView.tag = 100
+        scrollView.addSubview(pdfMachote)
+        self.view.addSubview(scrollView)
+        let aSelector : Selector = #selector(InformeDeAvence.removeSubview)
+        let tapGesture = UITapGestureRecognizer(target:self, action: aSelector)
+        scrollView.addGestureRecognizer(tapGesture)
+        return
         
         let page1 = PDFPage.view(pdfMachote.page1)
         let page2 = PDFPage.view(pdfMachote.page2)
@@ -1111,6 +1122,15 @@ class InformeDeAvence: UIViewController, UITableViewDataSource, UITableViewDeleg
             
         }))
         self.present(alert2, animated: true, completion: nil)
+    }
+    
+    func removeSubview(){
+        print("Start remove sibview")
+        if let viewWithTag = self.view.viewWithTag(100) {
+            viewWithTag.removeFromSuperview()
+        }else{
+            print("No!")
+        }
     }
     
     

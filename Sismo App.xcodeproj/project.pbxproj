@@ -150,6 +150,7 @@
 		83E916421EF460F6003D8DFD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E916411EF460F6003D8DFD /* MainViewController.swift */; };
 		83E916441EF46111003D8DFD /* InformeGeneral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E916431EF46111003D8DFD /* InformeGeneral.swift */; };
 		83E916481EF46430003D8DFD /* CustomizationExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E916471EF46430003D8DFD /* CustomizationExampleViewController.swift */; };
+		C809289C212EB0B900320743 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = C809289B212EB0B900320743 /* Places.swift */; };
 		C833CB54210BC74A00ACD760 /* Complementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C833CB53210BC74A00ACD760 /* Complementations.swift */; };
 		C83B45E92118C6D400A9F60D /* CheckCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83B45E82118C6D400A9F60D /* CheckCoreData.swift */; };
 		C88401EF210154EF00ADE9B3 /* Calibri Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C88401EB210154EE00ADE9B3 /* Calibri Italic.ttf */; };
@@ -345,6 +346,7 @@
 		83E916471EF46430003D8DFD /* CustomizationExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizationExampleViewController.swift; sourceTree = "<group>"; };
 		945C290E0EC12747D76BEB91 /* Pods-ExpyTableView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpyTableView_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExpyTableView_Example/Pods-ExpyTableView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		AD5BB7C2EE039CA333F3D532 /* Pods-Sismo App_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sismo App_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sismo App_Example/Pods-Sismo App_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C809289B212EB0B900320743 /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
 		C833CB53210BC74A00ACD760 /* Complementations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Complementations.swift; sourceTree = "<group>"; };
 		C83B45E82118C6D400A9F60D /* CheckCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckCoreData.swift; sourceTree = "<group>"; };
 		C88401EB210154EE00ADE9B3 /* Calibri Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Calibri Italic.ttf"; sourceTree = "<group>"; };
@@ -756,6 +758,7 @@
 			isa = PBXGroup;
 			children = (
 				C83B45E82118C6D400A9F60D /* CheckCoreData.swift */,
+				C809289B212EB0B900320743 /* Places.swift */,
 			);
 			name = Complement;
 			sourceTree = "<group>";
@@ -1077,6 +1080,7 @@
 				11BDE1BD1FDCA2250088CFAA /* AcecaDe.swift in Sources */,
 				111E361B1FDC78340073299D /* SistemaEstructural.swift in Sources */,
 				118731CB1FD7948C008F5DD3 /* SelectItemViewController.swift in Sources */,
+				C809289C212EB0B900320743 /* Places.swift in Sources */,
 				116C1C7B20147AAD000F6289 /* ScanBarcodeViewController.swift in Sources */,
 				111095121FD4585D000FEF90 /* ResponsableEstablecimiento.swift in Sources */,
 				116C1C7420147A9F000F6289 /* FocusMarker.swift in Sources */,

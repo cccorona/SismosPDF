@@ -64,97 +64,105 @@ class Escritorio: UIViewController {
         EvaluacionB = 0
         EvaluacionC = 0
         EvaluacionA = 1
-        var mensaje = ""
-//        if NumEdificios == 0 {
-          mensaje = "¿Desea utilizar la última información general guardada en el dispositivo?"
-//        } else {
-//            mensaje = "¿Desea utilizar la última información general guardada en el dispositivo? \n Número de edificios:" + NumEdificios.description
-//        }
-        let errorAlert = UIAlertController(title: "Nuevo informe", message: mensaje , preferredStyle: .alert)
         
-        errorAlert.addAction(UIAlertAction(title: "Si", style: .default, handler: {
-            alert -> Void in
-//            NumEdificios = NumEdificios + 1
-            
-            let alertController = UIAlertController(title: "Nuevo informe", message: "Por favor ingrese el nombre de la ficha de inspección", preferredStyle: .alert)
-            alertController.addTextField(configurationHandler: { (textField) -> Void in
-                textField.placeholder = "Nombre de la ficha"
-                textField.textAlignment = .left
-            })
-            
-            alertController.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: {
-                alert -> Void in
-                var medida1 = UITextField()
-                medida1 = alertController.textFields![0] as UITextField
-                NombreFicha = (medida1.text! as NSString).description
-                NombreOriginal = (medida1.text! as NSString).description
-                
-                if NombreFicha.isEmpty {
-                    let errorAlert = UIAlertController(title: "Error", message: "Por favor ingrese los datos solicitados", preferredStyle: .alert)
-                    errorAlert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: {
-                        alert -> Void in
-                        self.present(alertController, animated: true, completion: nil)
-                    }))
-                    self.present(errorAlert, animated: true, completion: nil)
-                    
-                } else {
-                  self.ConsultaFichas ()
-                }
-                
-            }))
-            alertController.addAction(UIAlertAction(title: "Cancelar", style: .cancel , handler: {
-                alert -> Void in
-                
-                
-            }))
-            self.present(alertController, animated: true, completion: nil)
-                
-//            self.ConsultaFichas ()
-        }))
+        var haveOtherFile = false
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Ficha")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            if result.count > 0{
+                haveOtherFile = true
+            }
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+
         
-        errorAlert.addAction(UIAlertAction(title: "No", style: .cancel, handler: {
-            alert -> Void in
-            
-            let alertController = UIAlertController(title: "Nuevo informe", message: "Por favor ingrese el nombre de la ficha de inspección", preferredStyle: .alert)
-            alertController.addTextField(configurationHandler: { (textField) -> Void in
-                textField.placeholder = "Nombre de la ficha"
-                textField.textAlignment = .left
-            })
-            
-            alertController.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: {
+        if haveOtherFile{
+            var mensaje = ""
+            mensaje = "¿Desea utilizar la última información general guardada en el dispositivo?"
+            let errorAlert = UIAlertController(title: "Nuevo informe", message: mensaje , preferredStyle: .alert)
+            errorAlert.addAction(UIAlertAction(title: "Si", style: .default, handler: {
                 alert -> Void in
-                var medida1 = UITextField()
-                medida1 = alertController.textFields![0] as UITextField
-                NombreFicha = (medida1.text! as NSString).description
-                NombreOriginal = (medida1.text! as NSString).description
-                
-                if NombreFicha.isEmpty {
-                    let errorAlert = UIAlertController(title: "Error", message: "Por favor ingrese los datos solicitados", preferredStyle: .alert)
-                    errorAlert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: {
-                        alert -> Void in
-                        self.present(alertController, animated: true, completion: nil)
-                    }))
-                    self.present(errorAlert, animated: true, completion: nil)
-                    
-                } else {
-                    self.ConsultaFichasSinDatos ()
-
-                }
-                
+                self.ReuseData()
             }))
-            alertController.addAction(UIAlertAction(title: "Cancelar", style: .cancel , handler: {
+            errorAlert.addAction(UIAlertAction(title: "No", style: .cancel, handler: {
                 alert -> Void in
-
-                
+                self.noReuseData()
             }))
-            self.present(alertController, animated: true, completion: nil)
-            
-
-        }))
-
-        self.present(errorAlert, animated: true, completion: nil)
-        
+            self.present(errorAlert, animated: true, completion: nil)
+        }else{
+            self.noReuseData()
+        }
     }
+    
+    func ReuseData(){
+        let alertController = UIAlertController(title: "Nuevo informe", message: "Por favor ingrese el nombre de la ficha de inspección", preferredStyle: .alert)
+        alertController.addTextField(configurationHandler: { (textField) -> Void in
+            textField.placeholder = "Nombre de la ficha"
+            textField.textAlignment = .left
+        })
+        
+        alertController.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: {
+            alert -> Void in
+            var medida1 = UITextField()
+            medida1 = alertController.textFields![0] as UITextField
+            NombreFicha = (medida1.text! as NSString).description
+            NombreOriginal = (medida1.text! as NSString).description
+            
+            if NombreFicha.isEmpty {
+                let errorAlert = UIAlertController(title: "Error", message: "Por favor ingrese los datos solicitados", preferredStyle: .alert)
+                errorAlert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: {
+                    alert -> Void in
+                    self.present(alertController, animated: true, completion: nil)
+                }))
+                self.present(errorAlert, animated: true, completion: nil)
+            } else {
+                self.ConsultaFichas ()
+            }
+        }))
+        alertController.addAction(UIAlertAction(title: "Cancelar", style: .cancel , handler: {
+            alert -> Void in
+            
+        }))
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    
+    func noReuseData(){
+        let alertController = UIAlertController(title: "Nuevo informe", message: "Por favor ingrese el nombre de la ficha de inspección", preferredStyle: .alert)
+        alertController.addTextField(configurationHandler: { (textField) -> Void in
+            textField.placeholder = "Nombre de la ficha"
+            textField.textAlignment = .left
+        })
+        
+        alertController.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: {
+            alert -> Void in
+            var medida1 = UITextField()
+            medida1 = alertController.textFields![0] as UITextField
+            NombreFicha = (medida1.text! as NSString).description
+            NombreOriginal = (medida1.text! as NSString).description
+            
+            if NombreFicha.isEmpty {
+                let errorAlert = UIAlertController(title: "Error", message: "Por favor ingrese los datos solicitados", preferredStyle: .alert)
+                errorAlert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: {
+                    alert -> Void in
+                    self.present(alertController, animated: true, completion: nil)
+                }))
+                self.present(errorAlert, animated: true, completion: nil)
+                
+            } else {
+                self.ConsultaFichasSinDatos ()
+                
+            }
+        }))
+        alertController.addAction(UIAlertAction(title: "Cancelar", style: .cancel , handler: {
+            alert -> Void in
+        }))
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    
     func NombreFichas (){
         let alertController = UIAlertController(title: "Nuevo informe", message: "Por favor ingrese el nombre de la ficha de inspección", preferredStyle: .alert)
         alertController.addTextField(configurationHandler: { (textField) -> Void in

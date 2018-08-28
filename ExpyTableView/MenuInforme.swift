@@ -242,12 +242,6 @@ class MenuInforme: UIViewController {
                 textField.textAlignment = .left
             })
             
-            alertController = UIAlertController(title: "Agregar edificio", message: "Por favor ingrese el nombre de la ficha de inspección", preferredStyle: .alert)
-            alertController.addTextField(configurationHandler: { (textField) -> Void in
-                textField.placeholder = "Nombre de la ficha"
-                textField.textAlignment = .left
-            })
-            
             alertController.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: {
                 alert -> Void in
                 var medida1 = UITextField()
@@ -329,22 +323,13 @@ class MenuInforme: UIViewController {
     }
     func AgregraEdificio (){
         
-        let OrdenEstado = NSSortDescriptor(key: "idficha", ascending: true)
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Ficha")
-        request.sortDescriptors = [OrdenEstado]
-        var fichaReference = idFichaPrincipal
-        if fichaReference == ""{
-            fichaReference = idFicha
-        }
-        request.predicate = NSPredicate(format: "idficha = %@", fichaReference )
-        request.returnsObjectsAsFaults = false
         var info1 = ""
         var info2 = ""
         var info3 = ""
         var info4 = ""
         var info5 = ""
         var info6 = ""
-         // idenficacion
+        // idenficacion
         
         var info7 = ""
         var info8 = ""
@@ -368,13 +353,19 @@ class MenuInforme: UIViewController {
         var longitud = ""
         var NombreAnterior = ""
         
-        var region = ""
         var provincia = ""
         var tipoDesastre = ""
         var tipoEmergencia = ""
         var titular = ""
         var descripcionDesastre = ""
         
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Ficha")
+        var fichaReference = idFichaPrincipal
+        if fichaReference == ""{
+            fichaReference = idFicha
+        }
+        request.predicate = NSPredicate(format: "idficha = %@", fichaReference )
+        //request.returnsObjectsAsFaults = false
         
         do {
             let result = try context.fetch(request)
@@ -615,7 +606,7 @@ class MenuInforme: UIViewController {
             newUser.setValue(tipoEmergencia, forKey: "informe5")
             newUser.setValue(tipoDesastre, forKey: "informe4")
             newUser.setValue(provincia, forKey: "informe3")
-            newUser.setValue(region, forKey: "informe2")
+//            newUser.setValue(region, forKey: "informe2")
             newUser.setValue(latitud, forKey: "latitud")
             newUser.setValue(longitud, forKey: "longitud")
             
