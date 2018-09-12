@@ -36,6 +36,7 @@ class CheckCoreData: NSObject {
         evalucacion57 = ""
         evalucacion58 = ""
         evalucacion59 = ""
+        evalucacion54 = ""
         evalucacion6 = ""
         evalucacion7 = ""
     }
