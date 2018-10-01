@@ -69,8 +69,15 @@ class CustomizationExampleViewController: UIViewController {
 	
 	@objc private func orientationDidChange() {
 		switch UIDevice.current.orientation {
+            
 		case .portrait, .portraitUpsideDown, .landscapeLeft, .landscapeRight:
-			expandableTableView.reloadSections(IndexSet(Array(expandableTableView.visibleSections.keys)), with: .none)
+            
+            var indexes = IndexSet()
+            let visibleCells = expandableTableView.visibleCells
+            for cell in visibleCells {
+                indexes.insert((expandableTableView.indexPath(for: cell)?.section)!)
+            }
+			expandableTableView.reloadSections(IndexSet(Array(indexes)), with: .none)
 		default:break
 		}
 	}
@@ -78,6 +85,14 @@ class CustomizationExampleViewController: UIViewController {
 
 //MARK: ExpyTableViewDataSourceMethods
 extension CustomizationExampleViewController: ExpyTableViewDataSource {
+    func tableView(_ tableView: ExpyTableView, expandableCellForSection section: Int) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: PhoneNameTableViewCell.self)) as! PhoneNameTableViewCell
+        cell.labelPhoneName.text = sampleData[section].first!
+        cell.layoutMargins = UIEdgeInsets.zero
+        cell.showSeparator()
+        return cell
+    }
+    
 	func canExpand(section: Int, inTableView tableView: ExpyTableView) -> Bool {
 		return true
 	}
