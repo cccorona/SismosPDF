@@ -347,15 +347,15 @@ extension InformeGeneral {
                     
                 } else {
                     if !evalucacion57.isEmpty {
-                        VistaCelda.btnPais.setTitle(informe2, for: UIControlState.normal)
+                        VistaCelda.btnPais.setTitle(evalucacion57, for: UIControlState.normal)
                     }
                     if !evalucacion58.isEmpty {
-                        VistaCelda.btnRegion.setTitle(informe2, for: UIControlState.normal)
+                        VistaCelda.btnRegion.setTitle(evalucacion58, for: UIControlState.normal)
                     }else{
                         VistaCelda.btnRegion.setTitle("Región", for: UIControlState.normal)
                     }
                     if !evalucacion59.isEmpty {
-                        VistaCelda.btnProvencia.setTitle(informe2, for: UIControlState.normal)
+                        VistaCelda.btnProvencia.setTitle(evalucacion59, for: UIControlState.normal)
                     }else{
                         VistaCelda.btnProvencia.setTitle("Provincia", for: UIControlState.normal)
                     }

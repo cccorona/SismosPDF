@@ -143,19 +143,24 @@ class CheckCoreData: NSObject {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
         imagesArr = [NSDictionary]()
+        if currentInformation != nil{
+
+            if checkFirstScreen(currentInformation){
+                AvanceFicha = AvanceFicha + 0.3
+            }
+            if checkSecondScreen(currentInformation){
+                AvanceFicha = AvanceFicha + 0.3
+            }
+            if checkThirtScreen(currentInformation){
+                AvanceFicha = AvanceFicha + 0.3
+            }
+            if AvanceFicha >= 0.8{
+               AvanceFicha = 1
+            }
+        }else{
+            print("No tienes información que guardar")
+        }
         
-        if checkFirstScreen(currentInformation){
-            AvanceFicha = AvanceFicha + 0.3
-        }
-        if checkSecondScreen(currentInformation){
-            AvanceFicha = AvanceFicha + 0.3
-        }
-        if checkThirtScreen(currentInformation){
-            AvanceFicha = AvanceFicha + 0.3
-        }
-        if AvanceFicha >= 0.8{
-           AvanceFicha = 1
-        }
     }
     
     private func checkFirstScreen(_ info:NSDictionary) -> Bool{
@@ -219,7 +224,7 @@ class CheckCoreData: NSObject {
         if (info.object(forKey: "identificacion12") as? String) == "" || (info.object(forKey: "identificacion12") as? String)  == nil{
             result = false
         }
-        //Se quita el parametro dirección 2 y dirección 3 de la barra de progreso
+        //Se quita el parametro  cción 2 y dirección 3 de la barra de progreso
 //        if (info.object(forKey: "identificacion13") as? String) == "" || (info.object(forKey: "identificacion13") as? String)  == nil{
 //            result = false
 //        }
